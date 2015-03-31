@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{81F055DF-D2E
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{47C8F34D-211A-400F-A1AB-F1EAACFF4A38}"
+	ProjectSection(SolutionItems) = preProject
+		karma.conf.js = karma.conf.js
+		Test\reference.ts = Test\reference.ts
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CF4D5FD2-EF81-426D-AA40-F460DACFB591}"
 EndProject
@@ -19,11 +23,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		gruntfile.js = gruntfile.js
 		package.json = package.json
 		package.info = package.info
+		tsd.json = tsd.json
 		tslint.json = tslint.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Typings", "_Typings", "{D450A92E-582D-40A9-A1DA-320989FBB1DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jasmine", "jasmine", "{24DE7A02-C53A-4E4D-A998-2D1C1AA8D604}"
+	ProjectSection(SolutionItems) = preProject
+		_Typings\jasmine\jasmine.d.ts = _Typings\jasmine\jasmine.d.ts
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24DE7A02-C53A-4E4D-A998-2D1C1AA8D604} = {D450A92E-582D-40A9-A1DA-320989FBB1DC}
 	EndGlobalSection
 EndGlobal

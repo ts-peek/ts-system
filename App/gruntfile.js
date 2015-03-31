@@ -1,19 +1,16 @@
 /// <vs AfterBuild='build' SolutionOpened='build' />
 module.exports = function(grunt) {
 
+    var app = {
+        build: "Build",
+        dist: "Dist",
+        src: "Src",
+        test: "Test"
+    };
+
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
-
-        // project structure
-        // ------------------------------------------------------------------------------
-
-        app: {
-            build: "Build",
-            dist: "Dist",
-            src: "Src",
-            test: "Test"
-        },
 
         // configuration of the tasks
         // ------------------------------------------------------------------------------
@@ -23,11 +20,17 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: "<%= app.build %>",
+                        cwd: app.build,
                         src: "*.min.js",
-                        dest: "<%= app.dist %>/"
+                        dest: app.dist
                     }
                 ]
+            }
+        },
+
+        karma: {
+            test: {
+                configFile: app.test + "/karma.conf.js"
             }
         },
 
@@ -36,13 +39,12 @@ module.exports = function(grunt) {
                 options: {
                     target: "es3", // "es3" (default) | "es5"
                     sourceMap: true, // true (default) | false
-                    sourceRoot: "/<%= app.src %>",
+                    sourceRoot: "/" + app.src,
                     declaration: false, // true | false (default)
                     removeComments: true // true (default) | false
                 },
-                src: ["<%= app.src %>/**/*.ts"],
-                reference: "<%= app.src %>/reference.ts",
-                out: "<%= app.build %>/<%= pkg.name %>.js"
+                src: [app.src + "/**/*.ts"],
+                out: app.build + "/<%= pkg.name %>.js"
             }
         },
 
@@ -51,7 +53,7 @@ module.exports = function(grunt) {
                 configuration: grunt.file.readJSON("tslint.json")
             },
             files: {
-                src: ["<%= app.src %>/**/*.ts"]
+                src: [app.src + "/**/*.ts"]
             }
         },
 
@@ -59,16 +61,16 @@ module.exports = function(grunt) {
             app: {
                 options: {
                     sourceMap: true,
-                    sourceMapIn: "<%= app.build %>/<%= pkg.name %>.js.map"
+                    sourceMapIn: app.build + "/<%= pkg.name %>.js.map"
                 },
-                src: ["<%= app.build %>/<%= pkg.name %>.js"],
-                dest: "<%= app.build %>/<%= pkg.name %>.min.js"
+                src: [app.build + "/<%= pkg.name %>.js"],
+                dest: app.build + "/<%= pkg.name %>.min.js"
             }
         },
 
         watch: {
             build: {
-                files: ["<%= app.src %>/**/*.ts"],
+                files: [app.src + "/**/*.ts"],
                 tasks: ["build"]
             }
         }
@@ -78,9 +80,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-karma");
     grunt.loadNpmTasks("grunt-ts");
     grunt.loadNpmTasks("grunt-tslint");
 
-    grunt.registerTask("build", ["ts", "uglify", "copy"]);
+    grunt.registerTask("build", ["ts", "tslint", "karma", "uglify", "copy"]);
     grunt.registerTask("default", ["build"]);
 };
