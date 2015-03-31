@@ -1,3 +1,10 @@
+/**
+ * Since Windows only supports paths with a maximum of 260 characters, the npm dependency chain may break this constraint, 
+ * which in turn prevents tools such as Visual Studio from committing any changes. A possible work around requires to
+ * analyze the package dependencies and find all deep dependency nestings. These nestings are the primary reason for the
+ * too long paths in Windows. However, when listing a package from in between the deep dependency list as direct root 
+ * dependency, npm will take the root package, which shortens the deep path significantly.
+ */
 {
 	"name": "TSSystem",
 	"version": "0.1.0",
@@ -14,6 +21,8 @@
 		"url": "https://christian_schaiter@bitbucket.org/lilacloud/tssystem.git"
 	},
 	"devDependencies": {
+		"anymatch": "^1.2.1", // required to short paths for Windows (found as dependency for "karma")
+		"file-reader": "^1.0.0", // required to short paths for Windows (found as dependency for "anymatch")
 		"grunt": "^0.4.5",
 		"grunt-contrib-copy": "^0.8.0",
 		"grunt-contrib-uglify": "^0.8.0",
