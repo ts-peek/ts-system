@@ -1,3 +1,4 @@
+/// <vs AfterBuild='build' SolutionOpened='build' />
 module.exports = function(grunt) {
 
     // Project configuration
@@ -68,7 +69,7 @@ module.exports = function(grunt) {
         watch: {
             build: {
                 files: ["<%= app.src %>/**/*.ts"],
-                tasks: ['scripts']
+                tasks: ["build"]
             }
         }
     });
