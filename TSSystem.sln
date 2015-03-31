@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{47C8F34D-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CF4D5FD2-EF81-426D-AA40-F460DACFB591}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{04EDFCCB-9824-4843-9FB2-BFFA603DB965}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_ProjectSetup", "_ProjectSetup", "{04EDFCCB-9824-4843-9FB2-BFFA603DB965}"
 	ProjectSection(SolutionItems) = preProject
 		gruntfile.js = gruntfile.js
 		package.json = package.json
