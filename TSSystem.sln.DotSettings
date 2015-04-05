@@ -1,0 +1,16 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	
+	
+	
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=520EFD206788C24DB2BA1D19C94C78DC/AbsolutePath/@EntryValue">D:\Private\LC\WebFrameworks\TSSystem\_ProjectItems\TypescriptSettings.DotSettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=520EFD206788C24DB2BA1D19C94C78DC/RelativePath/@EntryValue">..\_ProjectItems\TypescriptSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=520EFD206788C24DB2BA1D19C94C78DC/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=E4D62F4612FD994A90DA47F12070FED5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=E4D62F4612FD994A90DA47F12070FED5/AbsolutePath/@EntryValue">D:\Private\LC\WebFrameworks\TSSystem\_ProjectItems\CodeFormatSettings.DotSettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=E4D62F4612FD994A90DA47F12070FED5/RelativePath/@EntryValue">..\_ProjectItems\CodeFormatSettings.DotSettings</s:String>
+	
+	
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File520EFD206788C24DB2BA1D19C94C78DC/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File520EFD206788C24DB2BA1D19C94C78DC/RelativePriority/@EntryValue">1</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileE4D62F4612FD994A90DA47F12070FED5/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileE4D62F4612FD994A90DA47F12070FED5/RelativePriority/@EntryValue">2</s:Double></wpf:ResourceDictionary>
