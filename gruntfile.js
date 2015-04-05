@@ -17,6 +17,12 @@ module.exports = function(grunt) {
         // configuration of the tasks
         // ------------------------------------------------------------------------------
 
+        clean: {
+            build: [app.build],
+            dist: [app.dist],
+            docs: [app.docs]
+        },
+
         copy: {
             dist: {
                 files: [
@@ -67,9 +73,11 @@ module.exports = function(grunt) {
                     module: "commonjs",
                     target: "es3",
                     name: "<%= pkg.name %>",
-                    readme: "README.md"
+                    readme: "README.md",
+                    exclude: app.src + "reference.ts",
+                    mode: "file"
                 },
-                src: app.src + "**/*.ts"
+                src: app.src
             }
         },
 
@@ -93,6 +101,7 @@ module.exports = function(grunt) {
     });
 
     // Load the plugin that provides the uglify task
+    grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-watch");
@@ -101,6 +110,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-tslint");
     grunt.loadNpmTasks("grunt-typedoc");
 
-    grunt.registerTask("build", ["ts", "tslint", "karma", "uglify", "copy", "typedoc"]);
-    grunt.registerTask("default", ["build"]);
+    grunt.registerTask("doc", ["clean:docs", "typedoc:build"]);
+    grunt.registerTask("qa", ["tslint", "karma"]);
+    grunt.registerTask("build", ["clean:build", "ts", "qa", "uglify"]);
+    grunt.registerTask("all", ["build", "copy", "clean:dist", "doc"]);
+    grunt.registerTask("default", ["all"]);
 };
