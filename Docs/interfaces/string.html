@@ -112,16 +112,57 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="system.icomparable.html">IComparable</a>.<a href="system.icomparable.html#compareto">compareTo</a></p>
 								<ul>
-									<li>Defined in System/IComparable.ts:8</li>
+									<li>Defined in System/IComparable.ts:60</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Compares the current instance with another object of the same type and returns an integer that indicates
+										whether the current instance precedes, follows, or occurs in the same position in the sort order as the
+									other object.</p>
+									<p><p>
+											The <code>compareTo</code> provides a strongly typed comparison method for ordering members of a generic
+											collection object. Because of this, it is usually not called directly from developer code. Instead, it is
+										called automatically by methods of collection classes.</p>
+										<p><p>
+												This method is only a definition and must be implemented by a specific class or value type to have effect.
+												The meaning of the comparisons specified in the return value below (&quot;precedes&quot;, &quot;occurs in the same position
+												as&quot;, and &quot;follows) depends on the particular implementation. By definition, any object compares greater than
+												<code>undefined</code> or <code>null</code>, and two <code>undefined</code> or <code>null</code> references
+											compare equal to each other. Also, <code>undefined</code> compares equal to <code>null</code>.</p>
+											<p><p>
+													<i>Notes to Implementers:</i><br>
+												For objects <code>a</code>, <code>b</code>, and <code>c</code>, the following must be true:<br></p>
+												<ul>
+													<li><code>a.compareTo(a)</code> is required to return zero.<br></li>
+													<li>If <code>a.compareTo(b)</code> returns zero, then <code>b.compareTo(a)</code> is required to return zero.<br></li>
+													<li>If <code>a.compareTo(b)</code> returns zero and <code>b.compareTo(c)</code> returns zero, then
+													<code>a.compareTo(c)</code> is required to return zero.<br></li>
+													<li>If <code>a.compareTo(b)</code> returns a value other than zero, then <code>b.compareTo(a)</code> is required
+													to return a value of the opposite sign.<br></li>
+													<li>If <code>a.compareTo(b)</code> returns a value <i>x</i> that is not equal to zero, and
+														<code>b.compareTo(c)</code> returns a value <i>y</i> of the same sign as <i>x</i>, then
+													<code>a.compareTo(c)</code> is required to return a value of the same sign as <i>x</i> and <i>y</i>.</li>
+												</ul>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>other: <span class="tsd-signature-type">String</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An object to compare with this instance.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>A value that indicates the relative order of the objects being compared. The return value has these
+							meanings:<br></p>
+							<ul>
+								<li>Less than zero: this instance precedes <code>other</code> in the sort order;<br></li>
+								<li>Zero: this instance occurs at the sam position in the sort order as <code>other</code></li>
+								<li>Greater than zero: this instance follows <code>other</code> in the sort order.</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
