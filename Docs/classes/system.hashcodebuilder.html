@@ -73,10 +73,18 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Class providing means to implement the {Object.equals} method in a concise and consistent way.
-							This class is consistent with the {HashCodeBuilder} class, so that equal objects are guaranteed to return the
-						same hash code value.</p>
+						<p>Class providing means to implement the <code>Object::hashCode</code> method in a concise and consistent way.
+							This class is consistent with the <code>HashCodeBuilder</code> class, so that equal objects are guaranteed to
+						return the same hash code value.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Christian Schaiter</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p>EqualsBuilder</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -102,7 +110,6 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="system.hashcodebuilder.html#constant" class="tsd-kind-icon">constant</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="system.hashcodebuilder.html#total" class="tsd-kind-icon">total</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="system.hashcodebuilder.html#base10" class="tsd-kind-icon">base10</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -132,19 +139,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:19</li>
+									<li>Defined in System/HashCodeBuilder.ts:20</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Contructs a new {HashCodeBuilder} instance, using a given initial value and a multiplier. Both numbers must
-									be randomly chosen, non-zero and odd. Prime numbers are preferred, especially for the multiplier.</p>
+									<p>Contructs a new <code>HashCodeBuilder</code> instance, using a given initial value and a multiplier. Both
+									numbers must be randomly chosen, non-zero and odd. Prime numbers are preferred, especially for the multiplier.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>constructor</dt>
-									<dd></dd>
 									<dt>throws</dt>
-									<dd><p>{ArgumentException} If the {intialValue} argument or the {multiplier} argument are zero or even.</p>
+									<dd><p>ArgumentException If the <code>intialValue</code> argument or the <code>multiplier</code> argument
+										are zero or even.</p>
 									</dd>
 								</dl>
 							</div>
@@ -161,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">constant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/HashCodeBuilder.ts:17</li>
+							<li>Defined in System/HashCodeBuilder.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -171,17 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">total<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/HashCodeBuilder.ts:19</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="base10" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> base10</h3>
-					<div class="tsd-signature tsd-kind-icon">base10<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in System/HashCodeBuilder.ts:15</li>
+							<li>Defined in System/HashCodeBuilder.ts:20</li>
 						</ul>
 					</aside>
 				</section>
@@ -198,22 +194,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:55</li>
+									<li>Defined in System/HashCodeBuilder.ts:54</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Tests if two values are equal, considering the special behavior of the values&#39;s type.</p>
+									<p>Appends a hash code for the given value, considering the special behavior of the values&#39;s type.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value that contributes to the final hash code.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.hashcodebuilder.html" class="tsd-signature-type">HashCodeBuilder</a></h4>
-							<p>This {HashCodeBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>HashCodeBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -227,22 +226,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:73</li>
+									<li>Defined in System/HashCodeBuilder.ts:71</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Adds the result of {super.hashCode(object)} to this builder.</p>
+									<p>Adds the result of <code>super.hashCode()</code> to this builder.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>baseHashCode: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The result when calling {super.hashCode()}.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.hashcodebuilder.html" class="tsd-signature-type">HashCodeBuilder</a></h4>
-							<p>This {HashCodeBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>HashCodeBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -256,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:83</li>
+									<li>Defined in System/HashCodeBuilder.ts:80</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -268,10 +270,13 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The boolean value that contributes to the final hash code.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.hashcodebuilder.html" class="tsd-signature-type">HashCodeBuilder</a></h4>
-							<p>This {HashCodeBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>HashCodeBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -285,7 +290,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:103</li>
+									<li>Defined in System/HashCodeBuilder.ts:99</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -294,7 +299,7 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
-									<dd><p>{ArgumentOutOfRangeException} If the {precisionDigits} argument is negative.</p>
+									<dd><p>ArgumentOutOfRangeException If the <code>precisionDigits</code> argument is negative.</p>
 									</dd>
 								</dl>
 							</div>
@@ -302,13 +307,22 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number that contributes to the final hash code.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> precisionDigits: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number of decimal digits that must be zero in the absolute difference between two
+											numbers in order to be considered as equal. This parameter should be used in accordance with the precision
+											value used when calling the <code>EqualsBuilder::append(number,number,number)</code> method of the
+										<code>EqualsBuilder</code> class. Must be non-negative. Defaults to 0.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.hashcodebuilder.html" class="tsd-signature-type">HashCodeBuilder</a></h4>
-							<p>This {HashCodeBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>HashCodeBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -322,7 +336,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:126</li>
+									<li>Defined in System/HashCodeBuilder.ts:121</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -334,10 +348,13 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object that contributes to the final hash code.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.hashcodebuilder.html" class="tsd-signature-type">HashCodeBuilder</a></h4>
-							<p>This {HashCodeBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>HashCodeBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -351,7 +368,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:142</li>
+									<li>Defined in System/HashCodeBuilder.ts:136</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -363,13 +380,20 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The string that contributes to the final hash code.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> strategy: <a href="../enums/system.stringcomparison.html" class="tsd-signature-type">StringComparison</a><span class="tsd-signature-symbol"> =&nbsp;StringComparison.ORDINAL</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The strategy to use when building the hash code. If this parameter is not provided,
+										{StringComparison::ORDINAL} will be used.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.hashcodebuilder.html" class="tsd-signature-type">HashCodeBuilder</a></h4>
-							<p>This {HashCodeBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>HashCodeBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -383,7 +407,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/HashCodeBuilder.ts:162</li>
+									<li>Defined in System/HashCodeBuilder.ts:155</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -456,9 +480,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="system.hashcodebuilder.html#total" class="tsd-kind-icon">total</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="system.hashcodebuilder.html#base10" class="tsd-kind-icon">base10</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="system.hashcodebuilder.html#append" class="tsd-kind-icon">append</a>

@@ -73,10 +73,18 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Class providing means to implement the {Object.equals} method in a concise and consistent way.
-							This class is consistend with the {HashCodeBuilder} class, so that equal objects are guaranteed to return the
-						same hash code value.</p>
+						<p>Class providing means to implement the <code>Object::equals</code> method in a concise and consistent way.
+							This class is consistend with the <code>HashCodeBuilder</code> class, so that equal objects are guaranteed to
+						return the same hash code value.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Christian Schaiter</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p>HashCodeBuilder</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -121,7 +129,7 @@
 					<div class="tsd-signature tsd-kind-icon">equal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/EqualsBuilder.ts:15</li>
+							<li>Defined in System/EqualsBuilder.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -138,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/EqualsBuilder.ts:24</li>
+									<li>Defined in System/EqualsBuilder.ts:26</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -150,13 +158,19 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first value to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second value to compare.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.equalsbuilder.html" class="tsd-signature-type">EqualsBuilder</a></h4>
-							<p>This {EqualsBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>EqualsBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -170,22 +184,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/EqualsBuilder.ts:39</li>
+									<li>Defined in System/EqualsBuilder.ts:40</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Adds the result of {super.equals(object)} to this builder.</p>
+									<p>Adds the result of <code>super.equals(object)</code> to this builder.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>baseEquals: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The result when calling <code>super.equals(object)</code>.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.equalsbuilder.html" class="tsd-signature-type">EqualsBuilder</a></h4>
-							<p>This {EqualsBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>EqualsBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -211,13 +228,19 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first boolean value to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second boolean value to compare.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.equalsbuilder.html" class="tsd-signature-type">EqualsBuilder</a></h4>
-							<p>This {EqualsBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>EqualsBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -231,18 +254,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/EqualsBuilder.ts:78</li>
+									<li>Defined in System/EqualsBuilder.ts:80</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Tests if two numbers are equal, optionally using a the number of precision digits.
-										This method is compatible with the hash code generated by {HashCodeBuilder} when being invoked with the same
-									value for {precisionDigits}.</p>
+										This method is compatible with the hash code generated by <code>HashCodeBuilder</code> when being invoked
+									with the same value for <code>precisionDigits</code>.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
-									<dd><p>{ArgumentOutOfRangeException} If the {precisionDigits} argument is negative.</p>
+									<dd><p><code>ArgumentOutOfRangeException</code> If the <code>precisionDigits</code> argument is negative.</p>
 									</dd>
 								</dl>
 							</div>
@@ -250,16 +273,27 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first number to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second number to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> precisionDigits: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number of decimal digits that must be zero in the absolute difference
+											<code>|first - second|</code> in order to be considered as equal. If <code>precisionDigits</code> is zero,
+										the two numbers must match exactly to be treated as equal. Must be non-negative. Defaults to 0.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.equalsbuilder.html" class="tsd-signature-type">EqualsBuilder</a></h4>
-							<p>This {EqualsBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>EqualsBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -273,7 +307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/EqualsBuilder.ts:97</li>
+									<li>Defined in System/EqualsBuilder.ts:98</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -285,13 +319,19 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first object to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second object to compare.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.equalsbuilder.html" class="tsd-signature-type">EqualsBuilder</a></h4>
-							<p>This {EqualsBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>EqualsBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -310,24 +350,34 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Tests if two strings are equal in a strict manner, i.e. undefined, null and empty string values are
-									considered NOT equal.</p>
+									<p>Tests if two strings are equal in a strict manner, i.e. <code>undefined</code>, <code>null</code> and empty
+									<code>string</code> values are considered NOT equal.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first string to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second string to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> strategy: <a href="../enums/system.stringcomparison.html" class="tsd-signature-type">StringComparison</a><span class="tsd-signature-symbol"> =&nbsp;StringComparison.ORDINAL</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The strategy to use when comparing the two strings. If this parameter is not provided,
+										<code>StringComparison::ORDINAL</code> will be used.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.equalsbuilder.html" class="tsd-signature-type">EqualsBuilder</a></h4>
-							<p>This {EqualsBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>EqualsBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -341,7 +391,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/EqualsBuilder.ts:137</li>
+									<li>Defined in System/EqualsBuilder.ts:136</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -354,16 +404,26 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first string to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second string to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> strategy: <a href="../enums/system.stringcomparison.html" class="tsd-signature-type">StringComparison</a><span class="tsd-signature-symbol"> =&nbsp;StringComparison.ORDINAL</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The strategy to use when comparing the two strings. If this parameter is not provided,
+										<code>StringComparison::ORDINAL</code> will be used.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.equalsbuilder.html" class="tsd-signature-type">EqualsBuilder</a></h4>
-							<p>This {EqualsBuilder} instance, which may be used for chaining.</p>
+							<p>This <code>EqualsBuilder</code> instance, which may be used for chaining.</p>
 						</li>
 					</ul>
 				</section>
@@ -377,7 +437,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/EqualsBuilder.ts:158</li>
+									<li>Defined in System/EqualsBuilder.ts:156</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -386,7 +446,7 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>true if all tested objects are equal, false otherwise.</p>
+							<p><code>true</code> if all tested objects are equal, <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>

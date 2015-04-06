@@ -75,7 +75,25 @@
 					<div class="lead">
 						<p>Exception being thrown in case one of the arguments provided to a method or function does not meet the
 						prevalent preconditions.</p>
+						<p><p>
+								This exception should be thrown if no more concrete exception (that would describe the problem in a more concise
+								way) exists. E.g., if no <code>undefined</code> or <code>null</code> values are permitted as argument values, the
+							more concrete <code>ArgumentUndefinedException</code> should be thrown.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Christian Schaiter</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p>ArgumentOutOfRangeException</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p>ArgumentUndefinedException</p>
+						</dd>
+						<dt>see</dt>
+						<dd><p>ElementUndefinedException</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -129,12 +147,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ArgumentException.ts:15</li>
+									<li>Defined in System/ArgumentException.ts:24</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Constructs a new instance of the ArgumentException class.</p>
+									<p>Constructs a new instance of the <code>ArgumentException</code> class.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -161,7 +179,7 @@
 					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/ArgumentException.ts:21</li>
+							<li>Defined in System/ArgumentException.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -176,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/ArgumentException.ts:15</li>
+							<li>Defined in System/ArgumentException.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
