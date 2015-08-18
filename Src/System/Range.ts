@@ -12,14 +12,12 @@ module System {
 
         /**
          * Constructs a new range with the given lower and upper bounds.
-         * @public
-         * @constructor
-         * @param {number} The lower bound of this range. May not be undefined or null.
-         * @param {number} The upper bound of this range. May not be undefined or null. Must be greater than the given
+         * @param lowerBound The lower bound of this range. May not be undefined or null.
+         * @param upperBound The upper bound of this range. May not be undefined or null. Must be greater than the given
          * lower bound.
-         * @throws {ArgumentUndefinedException} If the {lowerBound} argument or the {upperBound} argument are undefined
-         * or null.
-         * @throws {ArgumentOutOfRangeException} If the upper bound is less than the lower bound.
+         * @throws ArgumentUndefinedException If the <code>lowerBound</code> argument or the <code>upperBound</code> 
+         * argument are <code>undefined</code> or <code>null</code>.
+         * @throws <code>ArgumentOutOfRangeException</code> If the upper bound is less than the lower bound.
          */
         constructor(private lowerBound: number, private upperBound: number) {
             Contract.isDefined(lowerBound, "Argument @lowerBound was undefined or null.");
@@ -30,8 +28,7 @@ module System {
 
         /**
          * Gets the interval between the lower und the upper bound.
-         * @public
-         * @return {boolean} The interval between lower and upper bound.
+         * @returns The interval between lower and upper bound.
          */
         public getInterval(): number {
             return this.upperBound - this.lowerBound;
@@ -39,8 +36,7 @@ module System {
 
         /**
          * Gets the lower bound of this range.
-         * @public
-         * @return {number} The lower bound.
+         * @returns The lower bound.
          */
         public getLowerBound(): number {
             return this.lowerBound;
@@ -48,8 +44,7 @@ module System {
 
         /**
          * Gets the upper bound of this range.
-         * @public
-         * @return {number} The upper bound.
+         * @returns The upper bound.
          */
         public getUpperBound(): number {
             return this.upperBound;
@@ -57,9 +52,8 @@ module System {
 
         /**
          * Checks whether or not the given value is within this range.
-         * @public
-         * @param {number} The number to test.
-         * @return {boolean} true, if the given number is within this range, false otherwise.
+         * @param The number to test.
+         * @return <code>true</code>, if the given number is within this range; <code>false</code> otherwise.
          */
         public isInRange(value: number): boolean {
             return ObjectUtil.isDefined(value) && this.lowerBound <= value && this.upperBound >= value;

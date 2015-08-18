@@ -16,7 +16,7 @@ module System {
      * @see ArgumentUndefinedException
      * @see ElementUndefinedException
      */
-    export class ArgumentException {
+    export class ArgumentException extends Exception {
 
         /**
          * The name of the exception.
@@ -27,6 +27,8 @@ module System {
          * Constructs a new instance of the <code>ArgumentException</code> class.
          * @param message The message that provides more details about the reason of the exception.
          */
-        constructor(public message?: string) {}
+        constructor(public message?: string) {
+            super(message);
+        }
     }
 }

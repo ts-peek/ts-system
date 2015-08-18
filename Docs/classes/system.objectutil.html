@@ -75,6 +75,11 @@
 					<div class="lead">
 						<p>Class providing utility methods when dealing with objects or when more information about a value is required.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Christian Schaiter</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -90,12 +95,6 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#interfacenameformat" class="tsd-kind-icon">interface<wbr>Name<wbr>Format</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static"><a href="system.objectutil.html#areequal" class="tsd-kind-icon">are<wbr>Equal</a></li>
@@ -105,7 +104,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#isboolean" class="tsd-kind-icon">is<wbr>Boolean</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#isdefined" class="tsd-kind-icon">is<wbr>Defined</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#isfunction" class="tsd-kind-icon">is<wbr>Function</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#isinstanceof" class="tsd-kind-icon">is<wbr>Instance<wbr>Of</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#isnumber" class="tsd-kind-icon">is<wbr>Number</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#isobject" class="tsd-kind-icon">is<wbr>Object</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.objectutil.html#issimpletype" class="tsd-kind-icon">is<wbr>Simple<wbr>Type</a></li>
@@ -114,19 +112,6 @@
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="interfacenameformat" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> interface<wbr>Name<wbr>Format</h3>
-					<div class="tsd-signature tsd-kind-icon">interface<wbr>Name<wbr>Format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in System/ObjectUtil.ts:13</li>
-						</ul>
-					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -141,9 +126,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:15</li>
+									<li>Defined in System/ObjectUtil.ts:22</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not two values are strictly equal. Strict equality considers <code>undefined</code> and
+									<code>null</code> values unequal and does not try to convert one value to match the other.</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -154,12 +145,19 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>lhs: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first value to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>rhs: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second value to compare.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if both given values are strictly equal; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -173,16 +171,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:33</li>
+									<li>Defined in System/ObjectUtil.ts:49</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new object with the given object as its prototype. This method provides ES3 support for the
+									<code>Object.create</code> method of ES5.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><code>ArgumentUndefinedException</code> If the <code>prototype</code> object is <code>undefined</code> or
+										<code>null</code>.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>prototype: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object being the prototype object of the newly created object. May not be
+										<code>undefined</code> or <code>null</code>.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span></h4>
+							<p>The newly created object with the given object as its prototype.</p>
 						</li>
 					</ul>
 				</section>
@@ -196,19 +211,52 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:48</li>
+									<li>Defined in System/ObjectUtil.ts:86</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given object implements a certain interface, being described by its name.</p>
+									<p><p>
+											Iin general, the name will be retrieved through the <code>InterfaceRegistry</code> class. Please note
+											that this method does not use structural typing when determining whether the object implements the
+											given interface, but instead uses the <code>IImplements.implements</code> method of the object itself. This
+										method provides runtime information about the interfaces the object implements.</p>
+										<p><p>
+												This method is especially usedful when overloading a method or constructor. When a method or constructor
+												is overloaded, the parameter type must be determined at runtime (where all interface information is lost,
+												since interfaces are a compile time only construct) in order to treat it correctly. When the static type
+												of the parameter is an interface, this method is the only chance to test if the parameter indeed implements
+											the static interface.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p>InterfaceRegistry</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p>IImplements</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>obj: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object being tested. If the object is <code>undefined</code> or <code>null</code>, the method
+										returns <code>false</code>.</p>
+									</div>
 								</li>
 								<li>
 									<h5>interfaceName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the interface (retrieved through the <code>InterfaceRegistry</code> class).</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given object implemnts the interface represented by its name;
+							<code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -222,16 +270,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:54</li>
+									<li>Defined in System/ObjectUtil.ts:97</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is an array.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is an array; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -245,16 +302,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:60</li>
+									<li>Defined in System/ObjectUtil.ts:108</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is a boolean value.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is a boolean value; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -268,16 +334,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:64</li>
+									<li>Defined in System/ObjectUtil.ts:118</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is defined, i.e. it is not <code>undefined</code> and not
+									<code>null</code>.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is defined; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -291,42 +367,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:68</li>
+									<li>Defined in System/ObjectUtil.ts:127</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is a function.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="isinstanceof" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Instance<wbr>Of</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Instance<wbr>Of<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, type<span class="tsd-signature-symbol">: </span><a href="../interfaces/system.iinstantiable.html" class="tsd-signature-type">IInstantiable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in System/ObjectUtil.ts:72</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>obj: <span class="tsd-signature-type">Object</span></h5>
-								</li>
-								<li>
-									<h5>type: <a href="../interfaces/system.iinstantiable.html" class="tsd-signature-type">IInstantiable</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is a function; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -340,16 +399,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:88</li>
+									<li>Defined in System/ObjectUtil.ts:136</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is a number.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is a number; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -363,16 +431,30 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:93</li>
+									<li>Defined in System/ObjectUtil.ts:147</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is an object (i.e. no simple type).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p>ObjectUtil.isSimpleType</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is an object; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -386,16 +468,30 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:97</li>
+									<li>Defined in System/ObjectUtil.ts:157</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is a simple type (i.e. no object).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p>ObjectUtil.isObject</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is an object; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -409,16 +505,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:101</li>
+									<li>Defined in System/ObjectUtil.ts:166</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is a string.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is a string; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -432,16 +537,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/ObjectUtil.ts:105</li>
+									<li>Defined in System/ObjectUtil.ts:176</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tests whether or not the given value is <code>undefined</code>. If the value is <code>null</code>, this
+									method returns <code>false</code>.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the given value is <code>undefined</code>; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -468,50 +583,11 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/system.stringcomparison.html" class="tsd-kind-icon">String<wbr>Comparison</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentexception.html" class="tsd-kind-icon">Argument<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentoutofrangeexception.html" class="tsd-kind-icon">Argument<wbr>Out<wbr>OfRange<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentundefinedexception.html" class="tsd-kind-icon">Argument<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.elementundefinedexception.html" class="tsd-kind-icon">Element<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.equalsbuilder.html" class="tsd-kind-icon">Equals<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.exceptionutil.html" class="tsd-kind-icon">Exception<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.formatexception.html" class="tsd-kind-icon">Format<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.hashcodebuilder.html" class="tsd-kind-icon">Hash<wbr>Code<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.invalidoperationexception.html" class="tsd-kind-icon">Invalid<wbr>Operation<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.notimplementedexception.html" class="tsd-kind-icon">Not<wbr>Implemented<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.numberutil.html" class="tsd-kind-icon">Number<wbr>Util</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="system.objectutil.html" class="tsd-kind-icon">Object<wbr>Util</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="system.objectutil.html#interfacenameformat" class="tsd-kind-icon">interface<wbr>Name<wbr>Format</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
 								<a href="system.objectutil.html#areequal" class="tsd-kind-icon">are<wbr>Equal</a>
 							</li>
@@ -534,9 +610,6 @@
 								<a href="system.objectutil.html#isfunction" class="tsd-kind-icon">is<wbr>Function</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="system.objectutil.html#isinstanceof" class="tsd-kind-icon">is<wbr>Instance<wbr>Of</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="system.objectutil.html#isnumber" class="tsd-kind-icon">is<wbr>Number</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -555,78 +628,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.range.html" class="tsd-kind-icon">Range</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.stringutil.html" class="tsd-kind-icon">String<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iaction0.html" class="tsd-kind-icon">IAction0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction1.html" class="tsd-kind-icon">IAction1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction2.html" class="tsd-kind-icon">IAction2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction3.html" class="tsd-kind-icon">IAction3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction4.html" class="tsd-kind-icon">IAction4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction5.html" class="tsd-kind-icon">IAction5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction6.html" class="tsd-kind-icon">IAction6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction7.html" class="tsd-kind-icon">IAction7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction8.html" class="tsd-kind-icon">IAction8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.icomparable.html" class="tsd-kind-icon">IComparable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iequatable.html" class="tsd-kind-icon">IEquatable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc0.html" class="tsd-kind-icon">IFunc0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc1.html" class="tsd-kind-icon">IFunc1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc2.html" class="tsd-kind-icon">IFunc2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc3.html" class="tsd-kind-icon">IFunc3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc4.html" class="tsd-kind-icon">IFunc4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc5.html" class="tsd-kind-icon">IFunc5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc6.html" class="tsd-kind-icon">IFunc6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc7.html" class="tsd-kind-icon">IFunc7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc8.html" class="tsd-kind-icon">IFunc8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iimplements.html" class="tsd-kind-icon">IImplements</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iinstantiable.html" class="tsd-kind-icon">IInstantiable</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

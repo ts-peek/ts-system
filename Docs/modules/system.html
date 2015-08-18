@@ -91,6 +91,8 @@
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.argumentundefinedexception.html" class="tsd-kind-icon">Argument<wbr>Undefined<wbr>Exception</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.elementundefinedexception.html" class="tsd-kind-icon">Element<wbr>Undefined<wbr>Exception</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.equalsbuilder.html" class="tsd-kind-icon">Equals<wbr>Builder</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.error.html" class="tsd-kind-icon">Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.exception.html" class="tsd-kind-icon">Exception</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.exceptionutil.html" class="tsd-kind-icon">Exception<wbr>Util</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.formatexception.html" class="tsd-kind-icon">Format<wbr>Exception</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/system.hashcodebuilder.html" class="tsd-kind-icon">Hash<wbr>Code<wbr>Builder</a></li>
@@ -127,8 +129,72 @@
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/system.ifunc8.html" class="tsd-kind-icon">IFunc8</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/system.iimplements.html" class="tsd-kind-icon">IImplements</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/system.iinstantiable.html" class="tsd-kind-icon">IInstantiable</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/system.iinstantiableexception.html" class="tsd-kind-icon">IInstantiable<wbr>Exception</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="system.html#interfaceregistry" class="tsd-kind-icon">Interface<wbr>Registry</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="interfaceregistry" class="tsd-anchor"></a>
+					<h3>Interface<wbr>Registry</h3>
+					<div class="tsd-signature tsd-kind-icon">Interface<wbr>Registry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in System/InterfaceRegistry.ts:42</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use this global variable to dynamically register new interfaces.</p>
+							<p><p>
+									Since interfaces are a compile time construct in TypeScript, the language does not provide any built-in means
+									to determine whether an object is an instance of an interface. When using function overloads, one
+									frequently has to check the type of the parameters and perform different actions for different parameter types.
+								However, whenever the type of the parameter is an interface, there is no simple way to check the type.</p>
+								<p><p>
+									<strong>Register an interface</strong></p>
+									<p><p>
+											This class serves as global registry for interfaces, providing means to access their names during
+											runtime (where all interface information would otherwise be lost). For most interfaces there is no need to
+											explicitly register them; however, in case you have to check instance types in function overloads, this registry
+											can provide a global reference to the parameter&#39;s interface type. Since this registry is of a dynamic type
+											(of type <code>any</code>), a new interface <i>INewInterface</i> may be registered by following single line of
+										code:</p>
+										<p><p>
+											<code>InterfaceRegistry.INewInterface = &quot;INewInterface&quot;;</code></p>
+											<p><p>
+												<strong>Test instances</strong></p>
+												<p><p>
+														Furthermore, the registered interface must extend the <code>IImplements</code> interface, which defines the
+														<code>IImplements::implements</code> method that exposes all interfaces being implemented by a
+														subclass. Without this information, it would be impossible for a class to determine which interfaces it actually
+														implements (remember, all this information is only available at compile time). As an example, all classes that
+														implement the <code>INewInterface</code> must define an <code>implements</code> method that returns a string array
+														of length 1, containing the string <code>&quot;INewInterface&quot;</code> as its single element. If all requirements above
+													are fulfilled, it is very simple to test if an object <i>o</i> is an instance of <i>INewInterface</i>:</p>
+													<p><p>
+														<code>ObjectUtil.implements(o, InterfaceRegistry.INewInterface);</code></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>author</dt>
+							<dd><p>Christian Schaiter</p>
+							</dd>
+							<dt>see</dt>
+							<dd><p>IImplements</p>
+							</dd>
+							<dt>see</dt>
+							<dd><p>ObjectUtil</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 			</section>
@@ -171,6 +237,12 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/system.equalsbuilder.html" class="tsd-kind-icon">Equals<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/system.error.html" class="tsd-kind-icon">Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/system.exception.html" class="tsd-kind-icon">Exception</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/system.exceptionutil.html" class="tsd-kind-icon">Exception<wbr>Util</a>
@@ -264,6 +336,12 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/system.iinstantiable.html" class="tsd-kind-icon">IInstantiable</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../interfaces/system.iinstantiableexception.html" class="tsd-kind-icon">IInstantiable<wbr>Exception</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="system.html#interfaceregistry" class="tsd-kind-icon">Interface<wbr>Registry</a>
 					</li>
 				</ul>
 			</nav>

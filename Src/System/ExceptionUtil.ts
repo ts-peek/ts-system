@@ -13,9 +13,9 @@ module System {
     export class ExceptionUtil {
 
         /**
-         * Gets a message describing that a parameter with the given name was <code>undefined</code> or <code>null</code>.
-         * Use this method to get consistent error messages for method parameters being illegally <code>undefined</code> or
-         * <code>null</code>.
+         * Gets a message describing that a parameter with the given name was illegally <code>undefined</code> or 
+         * <code>null</code>. Use this method to get consistent error messages for method parameters being illegally 
+         * <code>undefined</code> or <code>null</code>.
          * @param parameterName The name of the parameter being <code>undefined</code> or <code>null</code>. May not be
          * <code>undefined</code> or <code>null</code>.
          * @returns A consistent error message for <code>undefined</code> or <code>null</code> arguments.

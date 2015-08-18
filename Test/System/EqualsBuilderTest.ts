@@ -1,4 +1,4 @@
-﻿/// <reference path="../reference.ts"/> 
+﻿/*/// <reference path="../reference.ts"/> 
 
 module Test {
     "use strict";
@@ -18,6 +18,7 @@ module Test {
         public hashCode(): number { throw new Error("Not implemented"); }
     }
 
+    debugger;
     describe("System", () => {
         describe("EqualsBuilder", () => {
             var getBuilder: IFunc0<EqualsBuilder> = () => {
@@ -35,6 +36,7 @@ module Test {
 
             describe("append", () => {
                 it("does not modify the builder state when comparing equal values", () => {
+                    /* tslint:disable #1#
                     // Arrange
                     var builder: EqualsBuilder = getBuilder();
                     var equal: boolean = builder.isEqual();
@@ -304,4 +306,4 @@ module Test {
             });
         });
     });
-}
+}*/

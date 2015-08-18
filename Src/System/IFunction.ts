@@ -3,6 +3,16 @@
 module System {
     "use strict";
 
+    InterfaceRegistry.System.IFunc0 = "IFunc0";
+    InterfaceRegistry.System.IFunc1 = "IFunc1";
+    InterfaceRegistry.System.IFunc2 = "IFunc2";
+    InterfaceRegistry.System.IFunc3 = "IFunc3";
+    InterfaceRegistry.System.IFunc4 = "IFunc4";
+    InterfaceRegistry.System.IFunc5 = "IFunc5";
+    InterfaceRegistry.System.IFunc6 = "IFunc6";
+    InterfaceRegistry.System.IFunc7 = "IFunc7";
+    InterfaceRegistry.System.IFunc8 = "IFunc8";
+
     /**
      * Function interface that encapsulates a method that has no parameter and returns a value of type <TResult>.
      * 

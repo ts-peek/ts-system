@@ -5,7 +5,7 @@ module System.Diagnosis {
 
     export class Contract {
 
-        public static requires<TException extends Error>(condition: boolean, exceptionType: IErrorConstructor<TException>,
+        public static requires<TException extends Exception>(condition: boolean, exceptionType: IInstantiableException<TException>,
             message: string): void {
             if (!condition) {
                 throw new exceptionType(message);
@@ -20,7 +20,8 @@ module System.Diagnosis {
 
         public static isInRange(value: number, lowerBound: number, upperBound: number, message: string): void {
             Contract.isDefined(value, message);
-            Contract.requires(new Range(lowerBound, upperBound).isInRange(value), ArgumentOutOfRangeException, message);
+            Contract.requires<ArgumentOutOfRangeException>(new Range(lowerBound, upperBound).isInRange(value),
+                ArgumentOutOfRangeException, message);
         }
 
         public static isNegative(value: number, message: string): void {

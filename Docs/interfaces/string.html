@@ -71,10 +71,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="system.iequatable.html" class="tsd-signature-type">IEquatable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">&gt;</span>
+						<a href="system.iequatable.html" class="tsd-signature-type">IEquatable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span>
 					</li>
 					<li>
-						<a href="system.icomparable.html" class="tsd-signature-type">IComparable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">&gt;</span>
+						<a href="system.icomparable.html" class="tsd-signature-type">IComparable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">String</span>
@@ -91,7 +91,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="string.html#compareto" class="tsd-kind-icon">compare<wbr>To</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="string.html#equals" class="tsd-kind-icon">equals</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported"><a href="string.html#equals" class="tsd-kind-icon">equals</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="string.html#hashcode" class="tsd-kind-icon">hash<wbr>Code</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="string.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
@@ -105,14 +105,14 @@
 					<a name="compareto" class="tsd-anchor"></a>
 					<h3>compare<wbr>To</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">compare<wbr>To<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">compare<wbr>To<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="system.icomparable.html">IComparable</a>.<a href="system.icomparable.html#compareto">compareTo</a></p>
 								<ul>
-									<li>Defined in System/IComparable.ts:60</li>
+									<li>Defined in System/IComparable.ts:62</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -149,7 +149,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>other: <span class="tsd-signature-type">String</span></h5>
+									<h5>other: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>An object to compare with this instance.</p>
 									</div>
@@ -166,24 +166,24 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
 					<a name="equals" class="tsd-anchor"></a>
 					<h3>equals</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>other<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="system.iequatable.html">IEquatable</a>.<a href="system.iequatable.html#equals">equals</a></p>
+								<p>Overwrites <a href="system.iequatable.html">IEquatable</a>.<a href="system.iequatable.html#equals">equals</a></p>
 								<ul>
-									<li>Defined in System/IEquatable.ts:8</li>
+									<li>Defined in System/Extensions.ts:12</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>other: <span class="tsd-signature-type">String</span></h5>
+									<h5>other: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -192,7 +192,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="hashcode" class="tsd-anchor"></a>
-					<h3>hash<wbr>Code</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hash<wbr>Code</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">hash<wbr>Code<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
@@ -201,7 +201,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="system.iequatable.html">IEquatable</a>.<a href="system.iequatable.html#hashcode">hashCode</a></p>
 								<ul>
-									<li>Defined in System/IEquatable.ts:10</li>
+									<li>Defined in System/IEquatable.ts:29</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -243,9 +243,6 @@
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="boolean.html" class="tsd-kind-icon">Boolean</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-						<a href="ierrorconstructor.html" class="tsd-kind-icon">IError<wbr>Constructor</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="number.html" class="tsd-kind-icon">Number</a>
 					</li>
@@ -260,7 +257,7 @@
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="string.html#compareto" class="tsd-kind-icon">compare<wbr>To</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
 								<a href="string.html#equals" class="tsd-kind-icon">equals</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">

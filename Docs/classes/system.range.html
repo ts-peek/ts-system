@@ -134,14 +134,12 @@
 									<p>Constructs a new range with the given lower and upper bounds.</p>
 								</div>
 								<dl class="tsd-comment-tags">
-									<dt>constructor</dt>
-									<dd></dd>
 									<dt>throws</dt>
-									<dd><p>{ArgumentUndefinedException} If the {lowerBound} argument or the {upperBound} argument are undefined
-										or null.</p>
+									<dd><p>ArgumentUndefinedException If the <code>lowerBound</code> argument or the <code>upperBound</code>
+										argument are <code>undefined</code> or <code>null</code>.</p>
 									</dd>
 									<dt>throws</dt>
-									<dd><p>{ArgumentOutOfRangeException} If the upper bound is less than the lower bound.</p>
+									<dd><p><code>ArgumentOutOfRangeException</code> If the upper bound is less than the lower bound.</p>
 									</dd>
 								</dl>
 							</div>
@@ -149,9 +147,20 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>lowerBound: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The lower bound of this range. May not be undefined or null.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>upperBound: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The upper bound of this range. May not be undefined or null. Must be greater than the given
+											lower bound.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.range.html" class="tsd-signature-type">Range</a></h4>
@@ -167,9 +176,14 @@
 					<div class="tsd-signature tsd-kind-icon">lower<wbr>Bound<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/Range.ts:24</li>
+							<li>Defined in System/Range.ts:22</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The lower bound of this range. May not be undefined or null.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="upperbound" class="tsd-anchor"></a>
@@ -177,9 +191,15 @@
 					<div class="tsd-signature tsd-kind-icon">upper<wbr>Bound<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/Range.ts:24</li>
+							<li>Defined in System/Range.ts:22</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The upper bound of this range. May not be undefined or null. Must be greater than the given
+							lower bound.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -194,7 +214,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/Range.ts:36</li>
+									<li>Defined in System/Range.ts:33</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -217,7 +237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/Range.ts:45</li>
+									<li>Defined in System/Range.ts:41</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -240,7 +260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/Range.ts:54</li>
+									<li>Defined in System/Range.ts:49</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -263,7 +283,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/Range.ts:64</li>
+									<li>Defined in System/Range.ts:58</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -278,7 +298,7 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>true, if the given number is within this range, false otherwise.</p>
+							<p><code>true</code>, if the given number is within this range; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -305,45 +325,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/system.stringcomparison.html" class="tsd-kind-icon">String<wbr>Comparison</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentexception.html" class="tsd-kind-icon">Argument<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentoutofrangeexception.html" class="tsd-kind-icon">Argument<wbr>Out<wbr>OfRange<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentundefinedexception.html" class="tsd-kind-icon">Argument<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.elementundefinedexception.html" class="tsd-kind-icon">Element<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.equalsbuilder.html" class="tsd-kind-icon">Equals<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.exceptionutil.html" class="tsd-kind-icon">Exception<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.formatexception.html" class="tsd-kind-icon">Format<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.hashcodebuilder.html" class="tsd-kind-icon">Hash<wbr>Code<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.invalidoperationexception.html" class="tsd-kind-icon">Invalid<wbr>Operation<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.notimplementedexception.html" class="tsd-kind-icon">Not<wbr>Implemented<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.numberutil.html" class="tsd-kind-icon">Number<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.objectutil.html" class="tsd-kind-icon">Object<wbr>Util</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
@@ -374,75 +355,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.stringutil.html" class="tsd-kind-icon">String<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iaction0.html" class="tsd-kind-icon">IAction0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction1.html" class="tsd-kind-icon">IAction1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction2.html" class="tsd-kind-icon">IAction2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction3.html" class="tsd-kind-icon">IAction3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction4.html" class="tsd-kind-icon">IAction4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction5.html" class="tsd-kind-icon">IAction5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction6.html" class="tsd-kind-icon">IAction6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction7.html" class="tsd-kind-icon">IAction7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction8.html" class="tsd-kind-icon">IAction8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.icomparable.html" class="tsd-kind-icon">IComparable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iequatable.html" class="tsd-kind-icon">IEquatable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc0.html" class="tsd-kind-icon">IFunc0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc1.html" class="tsd-kind-icon">IFunc1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc2.html" class="tsd-kind-icon">IFunc2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc3.html" class="tsd-kind-icon">IFunc3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc4.html" class="tsd-kind-icon">IFunc4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc5.html" class="tsd-kind-icon">IFunc5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc6.html" class="tsd-kind-icon">IFunc6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc7.html" class="tsd-kind-icon">IFunc7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc8.html" class="tsd-kind-icon">IFunc8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iimplements.html" class="tsd-kind-icon">IImplements</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iinstantiable.html" class="tsd-kind-icon">IInstantiable</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

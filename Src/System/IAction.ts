@@ -3,6 +3,16 @@
 module System {
     "use strict";
 
+    InterfaceRegistry.System.IAction0 = "IAction0";
+    InterfaceRegistry.System.IAction1 = "IAction1";
+    InterfaceRegistry.System.IAction2 = "IAction2";
+    InterfaceRegistry.System.IAction3 = "IAction3";
+    InterfaceRegistry.System.IAction4 = "IAction4";
+    InterfaceRegistry.System.IAction5 = "IAction5";
+    InterfaceRegistry.System.IAction6 = "IAction6";
+    InterfaceRegistry.System.IAction7 = "IAction7";
+    InterfaceRegistry.System.IAction8 = "IAction8";
+
     /**
      * Function interface that encapsulates a method that has no parameter and does not return a value.
      * <p>

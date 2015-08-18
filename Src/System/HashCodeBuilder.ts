@@ -65,6 +65,13 @@ module System {
 
         /**
          * Adds the result of <code>super.hashCode()</code> to this builder.
+         * <p>
+         * Always call <code>appendBase</code> if the class that uses this <code>HashCodeBuilder</code> for the
+         * implementation of its <code>Object::hashCode</code> method inherits from some superclass. This ensures
+         * that all properties of the superclass are conviniently incorporated into the final result of the 
+         * <code>hashCode</code> method. Accordingly, only the own properties (used for the <code>equals</code> and 
+         * <code>hashCode</code> methods) of the class must be appended. This means that each class may concentrate on
+         * their own properties.
          * @param baseHashCode The result when calling {super.hashCode()}.
          * @return This <code>HashCodeBuilder</code> instance, which may be used for chaining.
          */

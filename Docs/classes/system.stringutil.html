@@ -70,6 +70,18 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Class providing utility methods when dealing with strings.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Christian Schaiter</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -83,11 +95,35 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="system.stringutil.html#emptystring" class="tsd-kind-icon">empty<wbr>String</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.stringutil.html#format" class="tsd-kind-icon">format</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="emptystring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> empty<wbr>String</h3>
+					<div class="tsd-signature tsd-kind-icon">empty<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in System/StringUtil.ts:18</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The empty string.</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -103,19 +139,49 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/StringUtil.ts:10</li>
+									<li>Defined in System/StringUtil.ts:39</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts the placeholders of the format string with the string representation of the provided varargs values.</p>
+									<p><p>
+											The placeholders of the format string take the form <code>{n}</code>, where <code>n</code> is a non-negative
+											integer number starting with 0, which denotes the position in the varargs value array. Please note that a number
+											greater than or equal to the number of values will cause a <code>FormatException</code>. Hence, the placeholders
+										<code>{0}, {1}, {2}</code> are valid if at least three values are provided when invoking the function.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><code>ArgumentUndefinedException</code> If the <code>format</code> argument is <code>undefined</code> or
+										<code>null</code>.</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p><code>FormatException</code> If a placeholder index greater than or equal to the number of given values in
+										the varargs array.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>format: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The format string containing the placeholders <code>{n}</code>. May not be <code>undefined</code>
+											or <code>null</code>. If a placeholder index is greater than or equal to the number of provided values, a
+										<code>FormatException</code> is thrown.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The values whose string representation replace the placeholders in the format string. Must at least
+										contain more elements than the greaterst placeholder index.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The format string with all placeholders being replaced by its corresponding value.</p>
 						</li>
 					</ul>
 				</section>
@@ -142,53 +208,14 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/system.stringcomparison.html" class="tsd-kind-icon">String<wbr>Comparison</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentexception.html" class="tsd-kind-icon">Argument<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentoutofrangeexception.html" class="tsd-kind-icon">Argument<wbr>Out<wbr>OfRange<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentundefinedexception.html" class="tsd-kind-icon">Argument<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.elementundefinedexception.html" class="tsd-kind-icon">Element<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.equalsbuilder.html" class="tsd-kind-icon">Equals<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.exceptionutil.html" class="tsd-kind-icon">Exception<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.formatexception.html" class="tsd-kind-icon">Format<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.hashcodebuilder.html" class="tsd-kind-icon">Hash<wbr>Code<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.invalidoperationexception.html" class="tsd-kind-icon">Invalid<wbr>Operation<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.notimplementedexception.html" class="tsd-kind-icon">Not<wbr>Implemented<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.numberutil.html" class="tsd-kind-icon">Number<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.objectutil.html" class="tsd-kind-icon">Object<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.range.html" class="tsd-kind-icon">Range</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="system.stringutil.html" class="tsd-kind-icon">String<wbr>Util</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="system.stringutil.html#emptystring" class="tsd-kind-icon">empty<wbr>String</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="system.stringutil.html#format" class="tsd-kind-icon">format</a>
 							</li>
@@ -196,72 +223,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iaction0.html" class="tsd-kind-icon">IAction0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction1.html" class="tsd-kind-icon">IAction1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction2.html" class="tsd-kind-icon">IAction2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction3.html" class="tsd-kind-icon">IAction3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction4.html" class="tsd-kind-icon">IAction4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction5.html" class="tsd-kind-icon">IAction5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction6.html" class="tsd-kind-icon">IAction6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction7.html" class="tsd-kind-icon">IAction7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction8.html" class="tsd-kind-icon">IAction8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.icomparable.html" class="tsd-kind-icon">IComparable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iequatable.html" class="tsd-kind-icon">IEquatable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc0.html" class="tsd-kind-icon">IFunc0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc1.html" class="tsd-kind-icon">IFunc1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc2.html" class="tsd-kind-icon">IFunc2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc3.html" class="tsd-kind-icon">IFunc3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc4.html" class="tsd-kind-icon">IFunc4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc5.html" class="tsd-kind-icon">IFunc5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc6.html" class="tsd-kind-icon">IFunc6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc7.html" class="tsd-kind-icon">IFunc7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc8.html" class="tsd-kind-icon">IFunc8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iimplements.html" class="tsd-kind-icon">IImplements</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iinstantiable.html" class="tsd-kind-icon">IInstantiable</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

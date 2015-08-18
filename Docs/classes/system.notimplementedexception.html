@@ -70,18 +70,29 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Exception being thrown in case that a method is not (yet) implemented.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Christian Schaiter</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">NotImplementedException</span>
+						<a href="system.exception.html" class="tsd-signature-type">Exception</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">NotImplementedException</span>
+							</li>
+						</ul>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">Error</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -91,14 +102,22 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="system.notimplementedexception.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="system.notimplementedexception.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="system.notimplementedexception.html#message" class="tsd-kind-icon">message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="system.notimplementedexception.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="system.notimplementedexception.html#innerexception" class="tsd-kind-icon">inner<wbr>Exception</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="system.notimplementedexception.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="system.notimplementedexception.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="system.notimplementedexception.html#stacktrace" class="tsd-kind-icon">stack<wbr>Trace</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="system.notimplementedexception.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 							</ul>
 						</section>
 					</div>
@@ -106,23 +125,34 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Not<wbr>Implemented<wbr>Exception<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="system.notimplementedexception.html" class="tsd-signature-type">NotImplementedException</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overwrites <a href="system.exception.html">Exception</a>.<a href="system.exception.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in System/NotImplementedException.ts:8</li>
+									<li>Defined in System/NotImplementedException.ts:16</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a new instance of the <code>NotImplementedException</code> class.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> message: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The message that provides more details about the reason of the exception.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.notimplementedexception.html" class="tsd-signature-type">NotImplementedException</a></h4>
@@ -132,25 +162,96 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="innerexception" class="tsd-anchor"></a>
+					<h3>inner<wbr>Exception</h3>
+					<div class="tsd-signature tsd-kind-icon">inner<wbr>Exception<span class="tsd-signature-symbol">:</span> <a href="system.exception.html" class="tsd-signature-type">Exception</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="system.exception.html">Exception</a>.<a href="system.exception.html#innerexception">innerException</a></p>
+						<ul>
+							<li>Defined in System/Exception.ts:86</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <code>Exception</code> instance that caused the current exception.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="message" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> message</h3>
 					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Overwrites <a href="system.exception.html">Exception</a>.<a href="system.exception.html#message">message</a></p>
 						<ul>
-							<li>Defined in System/NotImplementedException.ts:10</li>
+							<li>Defined in System/NotImplementedException.ts:22</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The message that provides more details about the reason of the exception.</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Overwrites <a href="system.exception.html">Exception</a>.<a href="system.exception.html#name">name</a></p>
 						<ul>
-							<li>Defined in System/NotImplementedException.ts:8</li>
+							<li>Defined in System/NotImplementedException.ts:16</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the exception.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="stacktrace" class="tsd-anchor"></a>
+					<h3>stack<wbr>Trace</h3>
+					<div class="tsd-signature tsd-kind-icon">stack<wbr>Trace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="system.exception.html">Exception</a>.<a href="system.exception.html#stacktrace">stackTrace</a></p>
+						<ul>
+							<li>Defined in System/Exception.ts:81</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The stack trace of the exception.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="tostring" class="tsd-anchor"></a>
+					<h3>to<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="system.exception.html">Exception</a>.<a href="system.exception.html#tostring">toString</a></p>
+								<ul>
+									<li>Defined in System/Exception.ts:106</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a proper string representation, consisting of the name and message of the exception.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>A string representation of the exception.</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -175,132 +276,33 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/system.stringcomparison.html" class="tsd-kind-icon">String<wbr>Comparison</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentexception.html" class="tsd-kind-icon">Argument<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentoutofrangeexception.html" class="tsd-kind-icon">Argument<wbr>Out<wbr>OfRange<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentundefinedexception.html" class="tsd-kind-icon">Argument<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.elementundefinedexception.html" class="tsd-kind-icon">Element<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.equalsbuilder.html" class="tsd-kind-icon">Equals<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.exceptionutil.html" class="tsd-kind-icon">Exception<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.formatexception.html" class="tsd-kind-icon">Format<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.hashcodebuilder.html" class="tsd-kind-icon">Hash<wbr>Code<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.invalidoperationexception.html" class="tsd-kind-icon">Invalid<wbr>Operation<wbr>Exception</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="system.notimplementedexception.html" class="tsd-kind-icon">Not<wbr>Implemented<wbr>Exception</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="system.notimplementedexception.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="system.notimplementedexception.html#innerexception" class="tsd-kind-icon">inner<wbr>Exception</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="system.notimplementedexception.html#message" class="tsd-kind-icon">message</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="system.notimplementedexception.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="system.notimplementedexception.html#stacktrace" class="tsd-kind-icon">stack<wbr>Trace</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="system.notimplementedexception.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.numberutil.html" class="tsd-kind-icon">Number<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.objectutil.html" class="tsd-kind-icon">Object<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.range.html" class="tsd-kind-icon">Range</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.stringutil.html" class="tsd-kind-icon">String<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iaction0.html" class="tsd-kind-icon">IAction0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction1.html" class="tsd-kind-icon">IAction1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction2.html" class="tsd-kind-icon">IAction2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction3.html" class="tsd-kind-icon">IAction3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction4.html" class="tsd-kind-icon">IAction4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction5.html" class="tsd-kind-icon">IAction5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction6.html" class="tsd-kind-icon">IAction6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction7.html" class="tsd-kind-icon">IAction7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction8.html" class="tsd-kind-icon">IAction8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.icomparable.html" class="tsd-kind-icon">IComparable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iequatable.html" class="tsd-kind-icon">IEquatable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc0.html" class="tsd-kind-icon">IFunc0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc1.html" class="tsd-kind-icon">IFunc1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc2.html" class="tsd-kind-icon">IFunc2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc3.html" class="tsd-kind-icon">IFunc3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc4.html" class="tsd-kind-icon">IFunc4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc5.html" class="tsd-kind-icon">IFunc5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc6.html" class="tsd-kind-icon">IFunc6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc7.html" class="tsd-kind-icon">IFunc7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc8.html" class="tsd-kind-icon">IFunc8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iimplements.html" class="tsd-kind-icon">IImplements</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iinstantiable.html" class="tsd-kind-icon">IInstantiable</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

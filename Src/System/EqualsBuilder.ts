@@ -34,6 +34,13 @@ module System {
 
         /**
          * Adds the result of <code>super.equals(object)</code> to this builder.
+         * <p>
+         * Always call <code>appendBase</code> if the class that uses this <code>EqualsBuilder</code> for the
+         * implementation of its <code>Object::equals</code> method inherits from some superclass. This ensures
+         * that all properties of the superclass are conviniently incorporated into the final result of the 
+         * <code>equals</code> method. Accordingly, only the own properties (used for the <code>equals</code> and 
+         * <code>hashCode</code> methods) of the class must be appended. This means that each class may concentrate on
+         * their own properties.
          * @param baseEquals The result when calling <code>super.equals(object)</code>.
          * @return This <code>EqualsBuilder</code> instance, which may be used for chaining.
          */

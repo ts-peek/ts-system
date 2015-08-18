@@ -3,9 +3,11 @@
 module System {
     "use strict";
 
+    InterfaceRegistry.System.IComparable = "IComparable";
+
     /**
-     * Interface that defines a generalized comparison method that a value type or class implements to create a 
-     * type-specific comparison method for ordering or sorting its instances.
+     * Interface that defines a generalized comparison method that a class implements to create a type-specific 
+     * comparison method for ordering or sorting its instances.
      * <p>
      * This interface is implemented by types whose values can be ordered or sorted and provides a strongly typed 
      * comparison method for ordering members of a generic collection object. For example, one number can be larger
@@ -20,7 +22,7 @@ module System {
      * <code>equals</code> method, which determines the equality of instances of the implementing type.
      * 
      * @author Christian Schaiter
-     * @see IEquatable
+     * @see IEquatable<T>
      */
     export interface IComparable<T> {
 

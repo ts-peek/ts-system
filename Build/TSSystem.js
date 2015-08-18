@@ -13,9 +13,15 @@ var System;
 (function (System) {
     "use strict";
 })(System || (System = {}));
+System.Error = Error;
 var System;
 (function (System) {
     "use strict";
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    System.InterfaceRegistry.IComparable = "IComparable";
 })(System || (System = {}));
 var System;
 (function (System) {
@@ -32,6 +38,19 @@ var System;
 var System;
 (function (System) {
     "use strict";
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    (function (StringComparison) {
+        StringComparison[StringComparison["ORDINAL"] = 0] = "ORDINAL";
+        StringComparison[StringComparison["IGNORE_CASE"] = 1] = "IGNORE_CASE";
+    })(System.StringComparison || (System.StringComparison = {}));
+    var StringComparison = System.StringComparison;
 })(System || (System = {}));
 Object.prototype.equals = function (other) {
     return this === other;
@@ -132,97 +151,15 @@ var System;
         Diagnosis.Contract = Contract;
     })(Diagnosis = System.Diagnosis || (System.Diagnosis = {}));
 })(System || (System = {}));
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
 var System;
 (function (System) {
     "use strict";
-    var ArgumentOutOfRangeException = (function (_super) {
-        __extends(ArgumentOutOfRangeException, _super);
-        function ArgumentOutOfRangeException(message) {
-            _super.call(this, message);
-            this.message = message;
-            this.name = "ArgumentOutOfRangeException";
-        }
-        return ArgumentOutOfRangeException;
-    })(System.ArgumentException);
-    System.ArgumentOutOfRangeException = ArgumentOutOfRangeException;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-    var ArgumentUndefinedException = (function (_super) {
-        __extends(ArgumentUndefinedException, _super);
-        function ArgumentUndefinedException(message) {
-            _super.call(this, message);
-            this.message = message;
-            this.name = "ArgumentUndefinedException";
-        }
-        return ArgumentUndefinedException;
-    })(System.ArgumentException);
-    System.ArgumentUndefinedException = ArgumentUndefinedException;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-    var ElementUndefinedException = (function (_super) {
-        __extends(ElementUndefinedException, _super);
-        function ElementUndefinedException(message) {
-            _super.call(this, message);
-            this.message = message;
-            this.name = "ElementUndefinedException";
-        }
-        return ElementUndefinedException;
-    })(System.ArgumentException);
-    System.ElementUndefinedException = ElementUndefinedException;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-    var FormatException = (function () {
-        function FormatException(message) {
-            this.message = message;
-            this.name = "FormatException";
-        }
-        return FormatException;
-    })();
-    System.FormatException = FormatException;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-    var InvalidOperationException = (function () {
-        function InvalidOperationException(message) {
-            this.message = message;
-            this.name = "InvalidOperationException";
-        }
-        return InvalidOperationException;
-    })();
-    System.InvalidOperationException = InvalidOperationException;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-    var NotImplementedException = (function () {
-        function NotImplementedException(message) {
-            this.message = message;
-            this.name = "NotImplementedException";
-        }
-        return NotImplementedException;
-    })();
-    System.NotImplementedException = NotImplementedException;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
+    var Contract = System.Diagnosis.Contract;
     var ExceptionUtil = (function () {
         function ExceptionUtil() {
         }
         ExceptionUtil.notDefinedMessage = function (parameterName) {
+            Contract.isDefined(parameterName, "You must provide the name of the parameter being undefined or null.");
             return "Argument @" + parameterName + " was undefined or null";
         };
         return ExceptionUtil;
@@ -365,9 +302,131 @@ var System;
                 return System.ObjectUtil.isDefined(args[numIndex]) ? args[numIndex] : match;
             });
         };
+        StringUtil.emptyString = "";
         return StringUtil;
     })();
     System.StringUtil = StringUtil;
+})(System || (System = {}));
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
+var System;
+(function (System) {
+    "use strict";
+    var Contract = System.Diagnosis.Contract;
+    var Exception = (function (_super) {
+        __extends(Exception, _super);
+        function Exception(message, innerException) {
+            _super.call(this, message);
+            this.name = "ExceptionHALLO";
+            this.message = System.ObjectUtil.isDefined(message) ? message : Exception.defaultMessage;
+            this.stackTrace = (new System.Error()).stackTrace;
+            this.innerException = innerException;
+        }
+        Exception.prototype.toString = function () {
+            return this.createExceptionInfo(this, System.StringUtil.emptyString);
+        };
+        Exception.prototype.createExceptionInfo = function (exception, infoString) {
+            Contract.isDefined(exception, System.ExceptionUtil.notDefinedMessage("exception"));
+            Contract.isDefined(infoString, System.ExceptionUtil.notDefinedMessage("infoString"));
+            infoString += System.StringUtil.format("{0}: {1}\n{2}\n", exception.name, exception.message, exception.stackTrace);
+            if (System.ObjectUtil.isDefined(exception.innerException)) {
+                infoString += System.StringUtil.format("\n>>>>>>> caused by:\n");
+                return this.createExceptionInfo(exception.innerException, infoString);
+            }
+            return infoString;
+        };
+        Exception.defaultMessage = "An error occured during program execution. View the stackTrace property for more details.";
+        return Exception;
+    })(System.Error);
+    System.Exception = Exception;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    var ArgumentOutOfRangeException = (function (_super) {
+        __extends(ArgumentOutOfRangeException, _super);
+        function ArgumentOutOfRangeException(message) {
+            _super.call(this, message);
+            this.message = message;
+            this.name = "ArgumentOutOfRangeException";
+        }
+        return ArgumentOutOfRangeException;
+    })(System.ArgumentException);
+    System.ArgumentOutOfRangeException = ArgumentOutOfRangeException;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    var ArgumentUndefinedException = (function (_super) {
+        __extends(ArgumentUndefinedException, _super);
+        function ArgumentUndefinedException(message) {
+            _super.call(this, message);
+            this.message = message;
+            this.name = "ArgumentUndefinedException";
+        }
+        return ArgumentUndefinedException;
+    })(System.ArgumentException);
+    System.ArgumentUndefinedException = ArgumentUndefinedException;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    var ElementUndefinedException = (function (_super) {
+        __extends(ElementUndefinedException, _super);
+        function ElementUndefinedException(message) {
+            _super.call(this, message);
+            this.message = message;
+            this.name = "ElementUndefinedException";
+        }
+        return ElementUndefinedException;
+    })(System.ArgumentException);
+    System.ElementUndefinedException = ElementUndefinedException;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    var FormatException = (function (_super) {
+        __extends(FormatException, _super);
+        function FormatException(message) {
+            _super.call(this, message);
+            this.message = message;
+            this.name = "FormatException";
+        }
+        return FormatException;
+    })(System.Exception);
+    System.FormatException = FormatException;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    var InvalidOperationException = (function (_super) {
+        __extends(InvalidOperationException, _super);
+        function InvalidOperationException(message) {
+            _super.call(this, message);
+            this.message = message;
+            this.name = "InvalidOperationException";
+        }
+        return InvalidOperationException;
+    })(System.Exception);
+    System.InvalidOperationException = InvalidOperationException;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    var NotImplementedException = (function (_super) {
+        __extends(NotImplementedException, _super);
+        function NotImplementedException(message) {
+            _super.call(this, message);
+            this.message = message;
+            this.name = "NotImplementedException";
+        }
+        return NotImplementedException;
+    })(System.Exception);
+    System.NotImplementedException = NotImplementedException;
 })(System || (System = {}));
 var System;
 (function (System) {
@@ -499,7 +558,7 @@ var System;
             if (precisionDigits === 0) {
                 precisionDigits = 1;
             }
-            var intValue = Math.round(value * Math.pow(HashCodeBuilder.base10, precisionDigits - 1)) | 0;
+            var intValue = Math.round(value * Math.pow(System.NumberUtil.base10, precisionDigits - 1)) | 0;
             this.total = this.total * this.constant + intValue;
             return this;
         };
@@ -524,19 +583,9 @@ var System;
         HashCodeBuilder.prototype.getHashCode = function () {
             return this.total;
         };
-        HashCodeBuilder.base10 = 10;
         return HashCodeBuilder;
     })();
     System.HashCodeBuilder = HashCodeBuilder;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-    (function (StringComparison) {
-        StringComparison[StringComparison["ORDINAL"] = 0] = "ORDINAL";
-        StringComparison[StringComparison["IGNORE_CASE"] = 1] = "IGNORE_CASE";
-    })(System.StringComparison || (System.StringComparison = {}));
-    var StringComparison = System.StringComparison;
 })(System || (System = {}));
 var System;
 (function (System) {
@@ -569,13 +618,20 @@ var System;
 var System;
 (function (System) {
     "use strict";
-    var ArgumentException = (function () {
+    var ArgumentException = (function (_super) {
+        __extends(ArgumentException, _super);
         function ArgumentException(message) {
+            _super.call(this, message);
             this.message = message;
             this.name = "ArgumentException";
         }
         return ArgumentException;
-    })();
+    })(System.Exception);
     System.ArgumentException = ArgumentException;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    System.InterfaceRegistry = {};
 })(System || (System = {}));
 //# sourceMappingURL=TSSystem.js.map

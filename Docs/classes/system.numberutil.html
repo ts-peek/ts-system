@@ -75,6 +75,11 @@
 					<div class="lead">
 						<p>Class providing utility methods to assist when dealing with numbers.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Christian Schaiter</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -117,7 +122,7 @@
 					<div class="tsd-signature tsd-kind-icon">base10<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in System/NumberUtil.ts:13</li>
+							<li>Defined in System/NumberUtil.ts:15</li>
 						</ul>
 					</aside>
 				</section>
@@ -134,26 +139,35 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:22</li>
+									<li>Defined in System/NumberUtil.ts:27</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets whether the first number equals the second number. The two values are being considered equal if the
-									first 3 digits of their difference are all zero.</p>
+										first 3 digits of their difference are all zero. If both values are <code>undefined</code> or <code>null</code>
+										they are also considered equal. However, if one value is <code>undefined</code> and the other value is
+									<code>null</code>, this method returns <code>false</code>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first number to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second number to compare.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>true, if the the two numbers are equal (with respect to 3 decimal places), false otherwise.</p>
+							<p><code>true</code>, if the the two numbers are equal (with respect to 3 decimal places); <code>false</code>
+							otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -167,26 +181,35 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:33</li>
+									<li>Defined in System/NumberUtil.ts:41</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets whether the first number equals the second number. The two values are being considered equal if the
-									first 6 digits of their difference are all zero.</p>
+										first 6 digits of their difference are all zero. If both values are <code>undefined</code> or <code>null</code>
+										they are also considered equal. However, if one value is <code>undefined</code> and the other value is
+									<code>null</code>, this method returns <code>false</code>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first number to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second number to compare.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>true, if the two numbers are equal (with respect to 6 decimal places), false otherwise</p>
+							<p><code>true</code>, if the two numbers are equal (with respect to 6 decimal places); <code>false</code>
+							otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -200,26 +223,35 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:44</li>
+									<li>Defined in System/NumberUtil.ts:55</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets whether the first number equals the second number. The two values are being considered equal if the
-									first 3 digits of their difference are all zero.</p>
+										first 3 digits of their difference are all zero. If both values are <code>undefined</code> or <code>null</code>
+										they are also considered equal. However, if one value is <code>undefined</code> and the other value is
+									<code>null</code>, this method returns <code>false</code>.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first number to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second number to compare.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>true, if the two numbers are equal (with respect to 9 decimal places), false otherwise.</p>
+							<p><code>true</code>, if the two numbers are equal (with respect to 9 decimal places), <code>false</code>
+							otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -233,17 +265,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:60</li>
+									<li>Defined in System/NumberUtil.ts:73</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets whether the first number equals the second number. The two values are being considered equal if the
-									first n digits of their difference are all zero.</p>
+										first n digits of their difference are all zero. If both values are <code>undefined</code> or <code>null</code>
+										they are also considered equal. However, if one value is <code>undefined</code> and the other value is
+									<code>null</code>, this method returns <code>false</code>.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
-									<dd><p>{ArgumentOutOfRangeException} If the {precisionDigits} argument is negative.</p>
+									<dd><p><code>ArgumentOutOfRangeException</code> If the <code>precisionDigits</code> argument is negative.</p>
 									</dd>
 								</dl>
 							</div>
@@ -251,22 +285,28 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>first: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first number to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5>second: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The second number to compare.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> precisionDigits: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;10</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The number of decimal digits that must be zero in the absolute difference
-											|{first} - {second}| in order to be considered equal. If {precisionDigits} is zero, the two values must
+											|{first} - {second}| in order to be considered equal. If <code>precisionDigits</code> is zero, the two values must
 										match exactly to be treated equal. Must be non-negative. Defaults to 10.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>true, if the the two numbers are equal (with respect to the given {precisionDigits} argument), false
-							otherwise.</p>
+							<p><code>true</code>, if the the two numbers are equal (with respect to the given <code>precisionDigits</code>
+							argument); <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -280,7 +320,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:79</li>
+									<li>Defined in System/NumberUtil.ts:91</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -298,7 +338,7 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>true if the given value may be parsed as a number, false otherwise.</p>
+							<p><code>true</code> if the given value may be parsed as a number; <code>false</code> otherwise.</p>
 						</li>
 					</ul>
 				</section>
@@ -312,16 +352,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:83</li>
+									<li>Defined in System/NumberUtil.ts:100</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the integer part of the given number.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number being transformed to an integer value. May not be <code>undefined</code> or <code>null</code></p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The integer part of the number.</p>
 						</li>
 					</ul>
 				</section>
@@ -348,39 +397,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/system.stringcomparison.html" class="tsd-kind-icon">String<wbr>Comparison</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentexception.html" class="tsd-kind-icon">Argument<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentoutofrangeexception.html" class="tsd-kind-icon">Argument<wbr>Out<wbr>OfRange<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.argumentundefinedexception.html" class="tsd-kind-icon">Argument<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.elementundefinedexception.html" class="tsd-kind-icon">Element<wbr>Undefined<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.equalsbuilder.html" class="tsd-kind-icon">Equals<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.exceptionutil.html" class="tsd-kind-icon">Exception<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.formatexception.html" class="tsd-kind-icon">Format<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.hashcodebuilder.html" class="tsd-kind-icon">Hash<wbr>Code<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.invalidoperationexception.html" class="tsd-kind-icon">Invalid<wbr>Operation<wbr>Exception</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.notimplementedexception.html" class="tsd-kind-icon">Not<wbr>Implemented<wbr>Exception</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
@@ -411,81 +427,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.objectutil.html" class="tsd-kind-icon">Object<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.range.html" class="tsd-kind-icon">Range</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="system.stringutil.html" class="tsd-kind-icon">String<wbr>Util</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iaction0.html" class="tsd-kind-icon">IAction0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction1.html" class="tsd-kind-icon">IAction1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction2.html" class="tsd-kind-icon">IAction2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction3.html" class="tsd-kind-icon">IAction3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction4.html" class="tsd-kind-icon">IAction4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction5.html" class="tsd-kind-icon">IAction5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction6.html" class="tsd-kind-icon">IAction6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction7.html" class="tsd-kind-icon">IAction7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iaction8.html" class="tsd-kind-icon">IAction8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.icomparable.html" class="tsd-kind-icon">IComparable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.iequatable.html" class="tsd-kind-icon">IEquatable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc0.html" class="tsd-kind-icon">IFunc0</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc1.html" class="tsd-kind-icon">IFunc1</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc2.html" class="tsd-kind-icon">IFunc2</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc3.html" class="tsd-kind-icon">IFunc3</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc4.html" class="tsd-kind-icon">IFunc4</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc5.html" class="tsd-kind-icon">IFunc5</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc6.html" class="tsd-kind-icon">IFunc6</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc7.html" class="tsd-kind-icon">IFunc7</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/system.ifunc8.html" class="tsd-kind-icon">IFunc8</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iimplements.html" class="tsd-kind-icon">IImplements</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/system.iinstantiable.html" class="tsd-kind-icon">IInstantiable</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

@@ -7,8 +7,9 @@ interface Object extends System.IEquatable<Object> {
 interface Array<T> {
 }
 
-interface String extends System.IEquatable<String>, System.IComparable<String> {
+interface String extends System.IEquatable<string>, System.IComparable<string> {
     value(): string;
+    equals(other: string): boolean;
 }
 
 interface Number extends System.IEquatable<Number>, System.IComparable<Number> {
@@ -17,10 +18,6 @@ interface Number extends System.IEquatable<Number>, System.IComparable<Number> {
 
 interface Boolean extends System.IEquatable<Boolean>, System.IComparable<Boolean> {
     value(): boolean;
-}
-
-interface IErrorConstructor<T extends Error> {
-    new(message: string): T;
 }
 
 Object.prototype.equals = function(other: Object): boolean {

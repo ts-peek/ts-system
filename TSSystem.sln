@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dist", "Dist", "{78D06B5C-EFDB-4592-BE1B-A742A19711EB}"
 	ProjectSection(SolutionItems) = preProject
@@ -54,6 +54,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{3C1921
 		Src\System\ArgumentUndefinedException.ts = Src\System\ArgumentUndefinedException.ts
 		Src\System\ElementUndefinedException.ts = Src\System\ElementUndefinedException.ts
 		Src\System\EqualsBuilder.ts = Src\System\EqualsBuilder.ts
+		Src\System\Error.ts = Src\System\Error.ts
+		Src\System\Exception.ts = Src\System\Exception.ts
 		Src\System\ExceptionUtil.ts = Src\System\ExceptionUtil.ts
 		Src\System\Extensions.ts = Src\System\Extensions.ts
 		Src\System\FormatException.ts = Src\System\FormatException.ts
@@ -64,6 +66,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{3C1921
 		Src\System\IFunction.ts = Src\System\IFunction.ts
 		Src\System\IImplements.ts = Src\System\IImplements.ts
 		Src\System\IInstantiable.ts = Src\System\IInstantiable.ts
+		Src\System\IInstantiableException.ts = Src\System\IInstantiableException.ts
+		Src\System\InterfaceRegistry.ts = Src\System\InterfaceRegistry.ts
 		Src\System\InvalidOperationException.ts = Src\System\InvalidOperationException.ts
 		Src\System\Modules.ts = Src\System\Modules.ts
 		Src\System\NotImplementedException.ts = Src\System\NotImplementedException.ts
@@ -82,6 +86,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{5CA2D2E0-85D9-433B-A5B7-7D710D9362EC}"
 	ProjectSection(SolutionItems) = preProject
 		Test\System\EqualsBuilderTest.ts = Test\System\EqualsBuilderTest.ts
+		Test\System\ExceptionTest.ts = Test\System\ExceptionTest.ts
 		Test\System\HashCodeBuilderTest.ts = Test\System\HashCodeBuilderTest.ts
 		Test\System\ObjectUtilTest.ts = Test\System\ObjectUtilTest.ts
 		Test\System\RangeTest.ts = Test\System\RangeTest.ts
