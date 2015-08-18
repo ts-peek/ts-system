@@ -1,12 +1,19 @@
 var System;
 (function (System) {
     "use strict";
+    System.InterfaceRegistry = {};
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    System.InterfaceRegistry.System = System.InterfaceRegistry.System || {};
 })(System || (System = {}));
 var System;
 (function (System) {
     var Diagnosis;
     (function (Diagnosis) {
         "use strict";
+        System.InterfaceRegistry.System.Diagnosis = System.InterfaceRegistry.System.Diagnosis || {};
     })(Diagnosis = System.Diagnosis || (System.Diagnosis = {}));
 })(System || (System = {}));
 var System;
@@ -17,11 +24,43 @@ System.Error = Error;
 var System;
 (function (System) {
     "use strict";
+    System.InterfaceRegistry.System.IAction0 = "IAction0";
+    System.InterfaceRegistry.System.IAction1 = "IAction1";
+    System.InterfaceRegistry.System.IAction2 = "IAction2";
+    System.InterfaceRegistry.System.IAction3 = "IAction3";
+    System.InterfaceRegistry.System.IAction4 = "IAction4";
+    System.InterfaceRegistry.System.IAction5 = "IAction5";
+    System.InterfaceRegistry.System.IAction6 = "IAction6";
+    System.InterfaceRegistry.System.IAction7 = "IAction7";
+    System.InterfaceRegistry.System.IAction8 = "IAction8";
 })(System || (System = {}));
 var System;
 (function (System) {
     "use strict";
-    System.InterfaceRegistry.IComparable = "IComparable";
+    System.InterfaceRegistry.System.IComparable = "IComparable";
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    System.InterfaceRegistry.System.IEquatable = "IEquatable";
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    System.InterfaceRegistry.System.IInstantiableException = "IInstantiableException";
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
+    System.InterfaceRegistry.System.IFunc0 = "IFunc0";
+    System.InterfaceRegistry.System.IFunc1 = "IFunc1";
+    System.InterfaceRegistry.System.IFunc2 = "IFunc2";
+    System.InterfaceRegistry.System.IFunc3 = "IFunc3";
+    System.InterfaceRegistry.System.IFunc4 = "IFunc4";
+    System.InterfaceRegistry.System.IFunc5 = "IFunc5";
+    System.InterfaceRegistry.System.IFunc6 = "IFunc6";
+    System.InterfaceRegistry.System.IFunc7 = "IFunc7";
+    System.InterfaceRegistry.System.IFunc8 = "IFunc8";
 })(System || (System = {}));
 var System;
 (function (System) {
@@ -30,18 +69,7 @@ var System;
 var System;
 (function (System) {
     "use strict";
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
+    System.InterfaceRegistry.System.IInstantiable = "IInstantiable";
 })(System || (System = {}));
 var System;
 (function (System) {
@@ -213,18 +241,6 @@ var System;
         ObjectUtil.isFunction = function (value) {
             return typeof (value) === "function";
         };
-        ObjectUtil.isInstanceOf = function (obj, type) {
-            Contract.isDefined(type, System.ExceptionUtil.notDefinedMessage("type"));
-            if (!ObjectUtil.isDefined(obj)) {
-                return false;
-            }
-            for (var property in type.prototype) {
-                if (!(property in obj)) {
-                    return false;
-                }
-            }
-            return true;
-        };
         ObjectUtil.isNumber = function (value) {
             return typeof (value) === "number" && value === value;
         };
@@ -240,7 +256,6 @@ var System;
         ObjectUtil.isUndefined = function (value) {
             return typeof (value) === "undefined";
         };
-        ObjectUtil.interfaceNameFormat = ":{0}";
         return ObjectUtil;
     })();
     System.ObjectUtil = ObjectUtil;
@@ -321,7 +336,7 @@ var System;
         __extends(Exception, _super);
         function Exception(message, innerException) {
             _super.call(this, message);
-            this.name = "ExceptionHALLO";
+            this.name = "Exception";
             this.message = System.ObjectUtil.isDefined(message) ? message : Exception.defaultMessage;
             this.stackTrace = (new System.Error()).stackTrace;
             this.innerException = innerException;
@@ -628,10 +643,5 @@ var System;
         return ArgumentException;
     })(System.Exception);
     System.ArgumentException = ArgumentException;
-})(System || (System = {}));
-var System;
-(function (System) {
-    "use strict";
-    System.InterfaceRegistry = {};
 })(System || (System = {}));
 //# sourceMappingURL=TSSystem.js.map
