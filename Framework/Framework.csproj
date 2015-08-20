@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34A75822-5B0C-4E14-A251-B0D2E095F823}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework</RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bower.json" />
+    <Content Include="Build\TSSystem.js.map" />
+    <Content Include="Dist\TSSystem.min.js.map" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="_ProjectItems\development.info" />
+    <Content Include="_ProjectItems\Resharper\CodeFormatSettings.DotSettings" />
+    <Content Include="_ProjectItems\Resharper\InspectionSettings.DotSettings" />
+    <Content Include="_ProjectItems\Resharper\TypescriptSettings.DotSettings" />
+    <Content Include="_ProjectItems\tsd.json" />
+    <Content Include="_ProjectItems\tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Build\TSSystem.js" />
+    <Content Include="Dist\TSSystem.min.js" />
+    <Content Include="Docs\index.html" />
+    <Content Include="gruntfile.js" />
+    <Content Include="Test\karma.conf.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Src\reference.ts" />
+    <TypeScriptCompile Include="Src\System\ArgumentException.ts" />
+    <TypeScriptCompile Include="Src\System\ArgumentOutOfRangeException.ts" />
+    <TypeScriptCompile Include="Src\System\ArgumentUndefinedException.ts" />
+    <TypeScriptCompile Include="Src\System\Diagnosis\Contract.ts" />
+    <TypeScriptCompile Include="Src\System\ElementUndefinedException.ts" />
+    <TypeScriptCompile Include="Src\System\EqualsBuilder.ts" />
+    <TypeScriptCompile Include="Src\System\Error.ts" />
+    <TypeScriptCompile Include="Src\System\Exception.ts" />
+    <TypeScriptCompile Include="Src\System\ExceptionUtil.ts" />
+    <TypeScriptCompile Include="Src\System\Extensions.ts" />
+    <TypeScriptCompile Include="Src\System\FormatException.ts" />
+    <TypeScriptCompile Include="Src\System\HashCodeBuilder.ts" />
+    <TypeScriptCompile Include="Src\System\IAction.ts" />
+    <TypeScriptCompile Include="Src\System\IComparable.ts" />
+    <TypeScriptCompile Include="Src\System\IEquatable.ts" />
+    <TypeScriptCompile Include="Src\System\IFunction.ts" />
+    <TypeScriptCompile Include="Src\System\IImplements.ts" />
+    <TypeScriptCompile Include="Src\System\IInstantiable.ts" />
+    <TypeScriptCompile Include="Src\System\IInstantiableException.ts" />
+    <TypeScriptCompile Include="Src\System\InterfaceRegistry.ts" />
+    <TypeScriptCompile Include="Src\System\InvalidOperationException.ts" />
+    <TypeScriptCompile Include="Src\System\Modules.ts" />
+    <TypeScriptCompile Include="Src\System\NotImplementedException.ts" />
+    <TypeScriptCompile Include="Src\System\NumberUtil.ts" />
+    <TypeScriptCompile Include="Src\System\ObjectUtil.ts" />
+    <TypeScriptCompile Include="Src\System\Range.ts" />
+    <TypeScriptCompile Include="Src\System\StringComparison.ts" />
+    <TypeScriptCompile Include="Src\System\StringUtil.ts" />
+    <TypeScriptCompile Include="Test\reference.ts" />
+    <TypeScriptCompile Include="Test\System\EqualsBuilderTest.ts" />
+    <TypeScriptCompile Include="Test\System\ExceptionTest.ts" />
+    <TypeScriptCompile Include="Test\System\HashCodeBuilderTest.ts" />
+    <TypeScriptCompile Include="Test\System\ObjectUtilTest.ts" />
+    <TypeScriptCompile Include="Test\System\RangeTest.ts" />
+    <TypeScriptCompile Include="Test\System\StringUtilTest.ts" />
+    <TypeScriptCompile Include="_Typings\jasmine\jasmine.d.ts" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53620</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53620/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
