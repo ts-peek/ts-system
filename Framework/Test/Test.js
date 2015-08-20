@@ -362,6 +362,20 @@ var System;
 var System;
 (function (System) {
     "use strict";
+    var ArgumentException = (function (_super) {
+        __extends(ArgumentException, _super);
+        function ArgumentException(message) {
+            _super.call(this, message);
+            this.message = message;
+            this.name = "ArgumentException";
+        }
+        return ArgumentException;
+    })(System.Exception);
+    System.ArgumentException = ArgumentException;
+})(System || (System = {}));
+var System;
+(function (System) {
+    "use strict";
     var ArgumentOutOfRangeException = (function (_super) {
         __extends(ArgumentOutOfRangeException, _super);
         function ArgumentOutOfRangeException(message) {
@@ -630,18 +644,36 @@ var System;
     })();
     System.Range = Range;
 })(System || (System = {}));
-var System;
-(function (System) {
+var Test;
+(function (Test) {
     "use strict";
-    var ArgumentException = (function (_super) {
-        __extends(ArgumentException, _super);
-        function ArgumentException(message) {
-            _super.call(this, message);
-            this.message = message;
-            this.name = "ArgumentException";
-        }
-        return ArgumentException;
-    })(System.Exception);
-    System.ArgumentException = ArgumentException;
-})(System || (System = {}));
-//# sourceMappingURL=TSSystem.js.map
+    var Exception = System.Exception;
+    describe("System", function () {
+        describe("Exception", function () {
+            describe("@constructor", function () {
+                it("creates instances of the more general JavaScript <Error> type", function () {
+                    var exception = new Exception();
+                    expect(exception instanceof Error).toBe(true);
+                });
+            });
+        });
+    });
+})(Test || (Test = {}));
+var Test;
+(function (Test) {
+    "use strict";
+    describe("System", function () {
+        describe("StringUtil", function () {
+            describe("format", function () {
+                it("replaces the format string placeholders with matching values", function () {
+                });
+                it("leaves unmatched format items unmodified", function () {
+                });
+                it("throws exception if the given format is undefined or null", function () {
+                });
+                it("throws exception if the format string contains an invalid format item", function () {
+                });
+            });
+        });
+    });
+})(Test || (Test = {}));

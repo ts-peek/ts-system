@@ -3,104 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dist", "Dist", "{78D06B5C-EFDB-4592-BE1B-A742A19711EB}"
-	ProjectSection(SolutionItems) = preProject
-		Dist\TSSystem.min.js = Dist\TSSystem.min.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{81F055DF-D2E6-4D89-9009-79FE6AD0790C}"
-	ProjectSection(SolutionItems) = preProject
-		Src\reference.ts = Src\reference.ts
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{47C8F34D-211A-400F-A1AB-F1EAACFF4A38}"
-	ProjectSection(SolutionItems) = preProject
-		Test\karma.conf.js = Test\karma.conf.js
-		Test\reference.ts = Test\reference.ts
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CF4D5FD2-EF81-426D-AA40-F460DACFB591}"
-	ProjectSection(SolutionItems) = preProject
-		Build\TSSystem.js = Build\TSSystem.js
-		Build\TSSystem.min.js = Build\TSSystem.min.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_ProjectItems", "_ProjectItems", "{04EDFCCB-9824-4843-9FB2-BFFA603DB965}"
-	ProjectSection(SolutionItems) = preProject
-		_ProjectItems\development.info = _ProjectItems\development.info
-		gruntfile.js = gruntfile.js
-		package.json = package.json
-		README.md = README.md
-		_ProjectItems\tsd.json = _ProjectItems\tsd.json
-		_ProjectItems\tslint.json = _ProjectItems\tslint.json
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Typings", "_Typings", "{D450A92E-582D-40A9-A1DA-320989FBB1DC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jasmine", "jasmine", "{24DE7A02-C53A-4E4D-A998-2D1C1AA8D604}"
-	ProjectSection(SolutionItems) = preProject
-		_Typings\jasmine\jasmine.d.ts = _Typings\jasmine\jasmine.d.ts
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{878F9EE9-5A69-4519-BD3C-D237B08B49E4}"
-	ProjectSection(SolutionItems) = preProject
-		Docs\index.html = Docs\index.html
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{3C192100-8FFA-41B5-90F0-B864328EF1FB}"
-	ProjectSection(SolutionItems) = preProject
-		Src\System\ArgumentException.ts = Src\System\ArgumentException.ts
-		Src\System\ArgumentOutOfRangeException.ts = Src\System\ArgumentOutOfRangeException.ts
-		Src\System\ArgumentUndefinedException.ts = Src\System\ArgumentUndefinedException.ts
-		Src\System\ElementUndefinedException.ts = Src\System\ElementUndefinedException.ts
-		Src\System\EqualsBuilder.ts = Src\System\EqualsBuilder.ts
-		Src\System\Error.ts = Src\System\Error.ts
-		Src\System\Exception.ts = Src\System\Exception.ts
-		Src\System\ExceptionUtil.ts = Src\System\ExceptionUtil.ts
-		Src\System\Extensions.ts = Src\System\Extensions.ts
-		Src\System\FormatException.ts = Src\System\FormatException.ts
-		Src\System\HashCodeBuilder.ts = Src\System\HashCodeBuilder.ts
-		Src\System\IAction.ts = Src\System\IAction.ts
-		Src\System\IComparable.ts = Src\System\IComparable.ts
-		Src\System\IEquatable.ts = Src\System\IEquatable.ts
-		Src\System\IFunction.ts = Src\System\IFunction.ts
-		Src\System\IImplements.ts = Src\System\IImplements.ts
-		Src\System\IInstantiable.ts = Src\System\IInstantiable.ts
-		Src\System\IInstantiableException.ts = Src\System\IInstantiableException.ts
-		Src\System\InterfaceRegistry.ts = Src\System\InterfaceRegistry.ts
-		Src\System\InvalidOperationException.ts = Src\System\InvalidOperationException.ts
-		Src\System\Modules.ts = Src\System\Modules.ts
-		Src\System\NotImplementedException.ts = Src\System\NotImplementedException.ts
-		Src\System\NumberUtil.ts = Src\System\NumberUtil.ts
-		Src\System\ObjectUtil.ts = Src\System\ObjectUtil.ts
-		Src\System\Range.ts = Src\System\Range.ts
-		Src\System\StringComparison.ts = Src\System\StringComparison.ts
-		Src\System\StringUtil.ts = Src\System\StringUtil.ts
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagnosis", "Diagnosis", "{2731DAF6-F9C2-456E-B7E2-71C1F117B861}"
-	ProjectSection(SolutionItems) = preProject
-		Src\System\Diagnosis\Contract.ts = Src\System\Diagnosis\Contract.ts
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{5CA2D2E0-85D9-433B-A5B7-7D710D9362EC}"
-	ProjectSection(SolutionItems) = preProject
-		Test\System\EqualsBuilderTest.ts = Test\System\EqualsBuilderTest.ts
-		Test\System\ExceptionTest.ts = Test\System\ExceptionTest.ts
-		Test\System\HashCodeBuilderTest.ts = Test\System\HashCodeBuilderTest.ts
-		Test\System\ObjectUtilTest.ts = Test\System\ObjectUtilTest.ts
-		Test\System\RangeTest.ts = Test\System\RangeTest.ts
-		Test\System\StringUtilTest.ts = Test\System\StringUtilTest.ts
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{34A75822-5B0C-4E14-A251-B0D2E095F823}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34A75822-5B0C-4E14-A251-B0D2E095F823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A75822-5B0C-4E14-A251-B0D2E095F823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A75822-5B0C-4E14-A251-B0D2E095F823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A75822-5B0C-4E14-A251-B0D2E095F823}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{24DE7A02-C53A-4E4D-A998-2D1C1AA8D604} = {D450A92E-582D-40A9-A1DA-320989FBB1DC}
-		{3C192100-8FFA-41B5-90F0-B864328EF1FB} = {81F055DF-D2E6-4D89-9009-79FE6AD0790C}
-		{2731DAF6-F9C2-456E-B7E2-71C1F117B861} = {3C192100-8FFA-41B5-90F0-B864328EF1FB}
-		{5CA2D2E0-85D9-433B-A5B7-7D710D9362EC} = {47C8F34D-211A-400F-A1AB-F1EAACFF4A38}
 	EndGlobalSection
 EndGlobal

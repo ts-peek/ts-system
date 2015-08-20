@@ -54,6 +54,14 @@ module.exports = function(grunt) {
                 },
                 src: [app.src + "**/*.ts"],
                 out: app.build + "<%= pkg.name %>.js"
+            },
+            test: {
+                options: {
+                    sourceMap: false,
+                    fast: "never" // do not user fast compile (does not work when specifying the --out parameter anyways)
+                },
+                src: [app.test + "**/*.ts"],
+                out: app.test + "Test.js"
             }
         },
 

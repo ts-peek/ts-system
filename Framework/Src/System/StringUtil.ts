@@ -38,7 +38,7 @@ module System {
          */
         public static format(format: string, ...args: any[]) {
             Contract.isDefined(format, ExceptionUtil.notDefinedMessage("format"));
-            
+
             return format.replace(/{(\d+)}/g, (match: string, index: string) => {
                 Contract.requires(NumberUtil.isParsableAsNumber(index), FormatException,
                     "Illegal format item given '" + index + "'");

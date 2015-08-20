@@ -15,7 +15,7 @@ module System {
          * @param lowerBound The lower bound of this range. May not be undefined or null.
          * @param upperBound The upper bound of this range. May not be undefined or null. Must be greater than the given
          * lower bound.
-         * @throws ArgumentUndefinedException If the <code>lowerBound</code> argument or the <code>upperBound</code> 
+         * @throws <code>ArgumentUndefinedException</code> If the <code>lowerBound</code> argument or the <code>upperBound</code> 
          * argument are <code>undefined</code> or <code>null</code>.
          * @throws <code>ArgumentOutOfRangeException</code> If the upper bound is less than the lower bound.
          */
@@ -52,7 +52,7 @@ module System {
 
         /**
          * Checks whether or not the given value is within this range.
-         * @param The number to test.
+         * @param value The number to test.
          * @return <code>true</code>, if the given number is within this range; <code>false</code> otherwise.
          */
         public isInRange(value: number): boolean {
