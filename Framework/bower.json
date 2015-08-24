@@ -13,7 +13,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://bitbucket.org/lilacloud/tssystem"
+		"url": "git://bitbucket.org/lilacloud/tssystem"
 	},
   "license": "MIT",
   "ignore": [
