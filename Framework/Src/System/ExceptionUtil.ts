@@ -25,7 +25,7 @@ module System {
         public static notDefinedMessage(parameterName: string) {
             Contract.isDefined(parameterName, "You must provide the name of the parameter being undefined or null.");
 
-            return "Argument @" + parameterName + " was undefined or null";
+            return `Argument @${parameterName} was undefined or null.`;
         }
     }
 }

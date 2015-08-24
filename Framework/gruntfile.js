@@ -1,4 +1,4 @@
-/// <vs AfterBuild='build' SolutionOpened='build' />
+/// <vs BeforeBuild='ts:test' SolutionOpened='build' />
 module.exports = function(grunt) {
 
     var app = {
@@ -54,14 +54,6 @@ module.exports = function(grunt) {
                 },
                 src: [app.src + "**/*.ts"],
                 out: app.build + "<%= pkg.name %>.js"
-            },
-            test: {
-                options: {
-                    sourceMap: false,
-                    fast: "never" // do not user fast compile (does not work when specifying the --out parameter anyways)
-                },
-                src: [app.test + "**/*.ts"],
-                out: app.test + "Test.js"
             }
         },
 
@@ -70,7 +62,7 @@ module.exports = function(grunt) {
                 configuration: grunt.file.readJSON(app.projectItems + "tslint.json")
             },
             build: {
-                src: [app.src + "**/*.ts"]
+                src: [app.src + "**/*.ts", app.test + "**/*.ts*/"]
             }
         },
 
@@ -120,7 +112,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask("doc", ["clean:docs", "typedoc:build"]);
     grunt.registerTask("qa", ["tslint", "karma"]);
-    grunt.registerTask("build", ["clean:build", "ts", "qa", "uglify"]);
+    grunt.registerTask("build", ["clean:build", "ts", "qa"]);
     grunt.registerTask("all", ["build", "copy", "clean:dist", "doc"]);
     grunt.registerTask("default", ["all"]);
 };

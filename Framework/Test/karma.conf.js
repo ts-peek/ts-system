@@ -10,7 +10,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            "**/*.ts"
+            { pattern: "reference.ts", included: true }
         ],
 
         // list of files to exclude
@@ -19,14 +19,15 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            "**/*.ts": ["typescript"]
+            "reference.ts": ["typescript"]
         },
 
         typescriptPreprocessor: {
             options: {
                 sourceMap: true,
                 target: "ES3",
-                noImplicitAny: true
+                noImplicitAny: true,
+                removeComments: false
             }
         },
 
@@ -34,6 +35,15 @@ module.exports = function(config) {
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ["progress"],
+
+        coverageReporter: {
+            dir: "Coverage/",
+            reporters: [
+                { type: "lcov", subdir: "report-lcov" },
+                { type: "text-summary", subdir: ".", file: "coverage-summary.txt" },
+                { type: "text" }
+            ]
+        },
 
         // web server port
         port: 9876,
@@ -50,13 +60,20 @@ module.exports = function(config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ["PhantomJS"],
+        browsers: ["IE" /*"PhantomJS"*/],
 
         // If browser does not capture in given timeout [ms], kill it
         captureTimeout: 60000,
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: true
+        singleRun: true,
+
+        plugins: [
+            "karma-jasmine",
+            "karma-phantomjs-launcher",
+            "karma-ie-launcher",
+            "karma-typescript-preprocessor"
+        ]
     });
 };

@@ -62,8 +62,7 @@ module System {
      */
     export class Exception extends Error {
 
-        private static defaultMessage: string =
-        "An error occured during program execution. View the stackTrace property for more details.";
+        private static defaultMessage: string = "An error occured during program execution.";
 
         /**
          * The name of the exception.
@@ -76,21 +75,22 @@ module System {
         public message: string;
 
         /**
-         * The stack trace of the exception.
-         */
-        public stackTrace: string;
-
-        /**
          * The <code>Exception</code> instance that caused the current exception.
          */
         public innerException: Exception;
 
         /**
+         * The stack trace of the exception. Not available in all JS engines.
+         */
+        private stackTrace: string;
+
+        /**
          * Constructs a new instance of the <code>Exception</code> class.
          * @param message The message that provides more details about the reason of the exception.
+         * @param innerException The reason why the newly created exception occured.
          */
         constructor(message?: string);
-        constructor(message: string, innerException?: Exception);
+        constructor(message: string, innerException: Exception);
         constructor(message?: string, innerException?: Exception) {
             super(message);
 
@@ -104,7 +104,7 @@ module System {
          * @return A string representation of the exception.
          */
         public toString(): string {
-            return this.createExceptionInfo(this, StringUtil.emptyString);
+            return this.createExceptionInfo(this, StringUtil.EMPTY_STRING);
         }
 
         private createExceptionInfo(exception: Exception, infoString: string): string {

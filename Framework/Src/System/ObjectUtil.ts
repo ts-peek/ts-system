@@ -1,11 +1,7 @@
 ﻿/// <reference path="../reference.ts"/> 
 
 module System {
-    "use strict";
-
-    import Contract = Diagnosis.Contract;
-
-    /**
+    "use strict"; /**
      * Class providing utility methods when dealing with objects or when more information about a value is required.
      * 
      * @author Christian Schaiter
@@ -39,16 +35,15 @@ module System {
 
         /**
          * Creates a new object with the given object as its prototype. This method provides ES3 support for the 
-         * <code>Object.create</code> method of ES5.
+         * <code>Object.create</code> method of ES5. If the given <prototype> is <code>undefined</code> or
+         * <code>null</code>, the newly created object does not have a prototype (i.e. it does not inherit basic
+         * methods such as <code>toString()</code>).
          * @param prototype The object being the prototype object of the newly created object. May not be 
          * <code>undefined</code> or <code>null</code>.
          * @returns The newly created object with the given object as its prototype.
-         * @throws <code>ArgumentUndefinedException</code> If the <code>prototype</code> object is <code>undefined</code> or 
-         * <code>null</code>. 
          */
         public static createObject(prototype: Object): Object {
-            Contract.isDefined(prototype, ExceptionUtil.notDefinedMessage("prototype"));
-
+            prototype = prototype || null;
             if (ObjectUtil.isDefined(Object.create)) {
                 // If Object.create() is defined (EcmaScript 5), we use this function to create the new object with the
                 // given prototype
@@ -85,8 +80,8 @@ module System {
          */
         public static implements(obj: any, interfaceName: string): boolean {
             obj = <IImplements> obj;
-            return ObjectUtil.isDefined(obj) && ObjectUtil.isDefined(obj.implements)
-                && obj.implements().indexOf(interfaceName) >= 0;
+            return ObjectUtil.isDefined(obj) && ObjectUtil.isDefined(obj.implementedInterfaces)
+                && obj.implementedInterfaces().indexOf(interfaceName) >= 0;
         }
 
         /**
