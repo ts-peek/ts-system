@@ -1,6 +1,8 @@
 {
 	"name": "ts-system",
 	"description": "A base library providing fundamental TypeScript classes and interfaces.",
+	"main": [ ],
+	"homepage":  "https://bitbucket.org/lilacloud/tssystem",
 	"moduleType": [
 		"globals"
 	],
@@ -13,7 +15,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git://bitbucket.org/lilacloud/tssystem"
+		"url": "git@bitbucket.org:lilacloud/tssystem.git"
 	},
   "license": "MIT",
   "ignore": [
