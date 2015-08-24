@@ -26,9 +26,12 @@ module System {
         /**
          * Constructs a new instance of the <code>ArgumentException</code> class.
          * @param message The message that provides more details about the reason of the exception.
+         * @param innerException The reason why the newly created exception occured.
          */
-        constructor(public message?: string) {
-            super(message);
+        constructor(message?: string);
+        constructor(message: string, innerException: Exception);
+        constructor(message?: string, innerException?: Exception) {
+            super(message, innerException);
         }
     }
 }

@@ -6,7 +6,7 @@ module System {
     /**
      * Enumeration providing the case rules for comparing strings.
      */
-    export enum StringComparison {
+    export const enum StringComparison {
         /**
          * Compare strings by taking the exact string values.
          */

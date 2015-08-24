@@ -2,15 +2,20 @@
 	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=7B14080DB432014E9C97BB94436087EC/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=7B14080DB432014E9C97BB94436087EC/AbsolutePath/@EntryValue">D:\Private\LC\WebFrameworks\TSSystem\Framework\_ProjectItems\Resharper\InspectionSettings.DotSettings</s:String>
 	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=7B14080DB432014E9C97BB94436087EC/RelativePath/@EntryValue">..\Framework\_ProjectItems\Resharper\InspectionSettings.DotSettings</s:String>
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=A4FA76898197614AB85FEE1F0181032C/AbsolutePath/@EntryValue">D:\Private\LC\WebFrameworks\TSSystem\Framework\_ProjectItems\Resharper\CodeFormatSettings.DotSettings</s:String>
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=A4FA76898197614AB85FEE1F0181032C/RelativePath/@EntryValue">..\Framework\_ProjectItems\Resharper\CodeFormatSettings.DotSettings</s:String>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=A4FA76898197614AB85FEE1F0181032C/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=DD961B617CF9234DB1F292778B5EC091/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=DD961B617CF9234DB1F292778B5EC091/AbsolutePath/@EntryValue">D:\Private\LC\WebFrameworks\TSSystem\Framework\_ProjectItems\Resharper\CodeFormatSettings.DotSettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=DD961B617CF9234DB1F292778B5EC091/RelativePath/@EntryValue">..\Framework\_ProjectItems\Resharper\CodeFormatSettings.DotSettings</s:String>
+	
+	
+	
 	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=E3D6305EFD51F049973501434074DB26/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=E3D6305EFD51F049973501434074DB26/AbsolutePath/@EntryValue">D:\Private\LC\WebFrameworks\TSSystem\Framework\_ProjectItems\Resharper\TypescriptSettings.DotSettings</s:String>
 	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=E3D6305EFD51F049973501434074DB26/RelativePath/@EntryValue">..\Framework\_ProjectItems\Resharper\TypescriptSettings.DotSettings</s:String>
 	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File7B14080DB432014E9C97BB94436087EC/@KeyIndexDefined">True</s:Boolean>
-	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File7B14080DB432014E9C97BB94436087EC/RelativePriority/@EntryValue">2</s:Double>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileA4FA76898197614AB85FEE1F0181032C/@KeyIndexDefined">True</s:Boolean>
-	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileA4FA76898197614AB85FEE1F0181032C/RelativePriority/@EntryValue">1</s:Double>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File7B14080DB432014E9C97BB94436087EC/RelativePriority/@EntryValue">0.5</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileDD961B617CF9234DB1F292778B5EC091/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileDD961B617CF9234DB1F292778B5EC091/RelativePriority/@EntryValue">4</s:Double>
+	
+	
 	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileE3D6305EFD51F049973501434074DB26/@KeyIndexDefined">True</s:Boolean>
 	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileE3D6305EFD51F049973501434074DB26/RelativePriority/@EntryValue">3</s:Double></wpf:ResourceDictionary>
