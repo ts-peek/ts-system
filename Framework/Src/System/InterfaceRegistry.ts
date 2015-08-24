@@ -25,7 +25,7 @@ module System {
      * <strong>Test instances</strong>
      * <p>
      * Furthermore, the registered interface must extend the <code>IImplements</code> interface, which defines the 
-     * <code>IImplements::implements</code> method that exposes all interfaces being implemented by a
+     * <code>IImplements.implementedInterfaces</code> method that exposes all interfaces being implemented by a
      * subclass. Without this information, it would be impossible for a class to determine which interfaces it actually 
      * implements (remember, all this information is only available at compile time). As an example, all classes that 
      * implement the <code>INewInterface</code> must define an <code>implements</code> method that returns a string array

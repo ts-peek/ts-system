@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
@@ -107,90 +107,144 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="system.iequatable.html">IEquatable</a>.<a href="system.iequatable.html#equals">equals</a></p>
 								<ul>
-									<li>Defined in System/IEquatable.ts:27</li>
+									<li>Defined in System/IEquatable.ts:51</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Indicates whether the current object is equal to another object of the same type.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>other: <span class="tsd-signature-type">Object</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>An object to compare with this object.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p><code>true</code> if the current object is equal to the <code>other</code> paramter, <code>false</code>
-							otherwise.</p>
-						</li>
+									<p><p>
+										The equals method implements an equivalence relation on non-null object references:</p>
+										<p><ul></p>
+										<p><li>It is <i>reflexive</i>: for any non-null reference value <code>x</code>, <code>x.equals(x)</code> should return
+										<code>true</code>.</p>
+										<p><li>It is <emph>symmetric</emph>: for any non-null reference values <code>x</code> and <code>y</code>, <code>x.equals(y)</code>
+												should return
+										<code>true</code> if and only if <code>y.equals(x)</code> returns <code>true</code>.</p>
+										<p><li>It is <i>transitive</i>: for any non-null reference values <code>x</code>, <code>y</code>, and <code>z</code>, if
+												<code>x.equals(y)</code> returns <code>true</code> and <code>y.equals(z)</code> returns <code>true,</code> then
+										<code>x.equals(z)</code> should return <code>true</code>.</p>
+										<p><li>It is <i>consistent</i>: for any non-null reference values <code>x</code> and <code>y</code>, multiple invocations of
+												<code>x.equals(y)</code> consistently return <code>true</code> or consistently return <code>false</code>, provided no
+										information used in equals comparisons on the objects is modified.</p>
+										<p><li>For any non-null reference value <code>x</code>, <code>x.equals(null)</code> should return <code>false</code>.
 					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="hashcode" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hash<wbr>Code</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">hash<wbr>Code<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="system.iequatable.html">IEquatable</a>.<a href="system.iequatable.html#hashcode">hashCode</a></p>
-								<ul>
-									<li>Defined in System/IEquatable.ts:29</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
+					The <code>IEquatable.equals</code> method for plain JavaScript objects (objects that do not override their <code>equals</code>
+					method) implements the most discriminating possible equivalence relation on objects; that is, for any non-null reference values
+					<code>x</code> and <code>y</code>, this method returns <code>true</code> if and only if <code>x</code> and <code>y</code> refer
+					to the same object (<code>x === y</code> has the value <code>true</code>).</p>
+					<p><p>
+							Note that it is generally necessary to override the <code>IEquatable.hashCode</code> method whenever this method is overridden,
+							so as to maintain the general contract for the <code>IEquatable.hashCode</code> method, which states that equal objects must
+						have equal hash codes.</p>
 		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-			<nav class="tsd-navigation primary">
-				<ul>
-					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="tsd-navigation secondary menu-sticky">
-				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-not-exported">
-						<a href="array.html" class="tsd-kind-icon">Array</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="boolean.html" class="tsd-kind-icon">Boolean</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="number.html" class="tsd-kind-icon">Number</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-is-not-exported">
-						<a href="object.html" class="tsd-kind-icon">Object</a>
-						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="object.html#equals" class="tsd-kind-icon">equals</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="object.html#hashcode" class="tsd-kind-icon">hash<wbr>Code</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="string.html" class="tsd-kind-icon">String</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+		<dl class="tsd-comment-tags">
+			<dt>see</dt>
+			<dd><p>IEquatable.hashCode</p>
+			</dd>
+		</dl>
 	</div>
+	<h4 class="tsd-parameters-title">Parameters</h4>
+	<ul class="tsd-parameters">
+		<li>
+			<h5>other: <span class="tsd-signature-type">Object</span></h5>
+			<div class="tsd-comment tsd-typography">
+				<p>An object to compare with this object.</p>
+			</div>
+		</li>
+	</ul>
+	<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+	<p><code>true</code> if the current object is equal to the <code>other</code> paramter, <code>false</code>
+	otherwise.</p>
+	</li>
+	</ul>
+	</section>
+	<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+		<a name="hashcode" class="tsd-anchor"></a>
+		<h3><span class="tsd-flag ts-flagOptional">Optional</span> hash<wbr>Code</h3>
+		<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+			<li class="tsd-signature tsd-kind-icon">hash<wbr>Code<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+		</ul>
+		<ul class="tsd-descriptions">
+			<li class="tsd-description">
+				<aside class="tsd-sources">
+					<p>Inherited from <a href="system.iequatable.html">IEquatable</a>.<a href="system.iequatable.html#hashcode">hashCode</a></p>
+					<ul>
+						<li>Defined in System/IEquatable.ts:72</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Gets a hash code value for the object. This method is supported for the benefit of collections that internally use hash tables.</p>
+						<p><p>
+							The general contract of <code>IEquatable.hashCode</code> is:</p>
+							<p><ul></p>
+							<p><li>Whenever it is invoked on the same object more than once during an execution of a JavaScript application, the method must
+									consistently return the same integer, provided no information used in equals comparisons on the object is modified. This integer
+							need not remain consistent from one execution of an application to another execution of the same application.</p>
+							<p><li>If two objects are equal according to the <code>IEquatable.equals</code> method, then calling the
+							<code>IEquatable.hashCode</code> method on each of the two objects must produce the same integer result.</p>
+							<p><li>It is not required that if two objects are unequal according to the <code>IEquatable.equals</code> method, then calling the
+									<code>IEquatable.hashCode</code> method on each of the two objects must produce distinct results. However, the programmer should
+									be aware that producing distinct results for unequal objects may improve the performance of hash tables.
+		</ul>
+		As much as is reasonably practical, the <code>IEquatable.hashCode</code> method of plain objects does return distinct integers
+		for distinct objects.</p>
+</div>
+<dl class="tsd-comment-tags">
+	<dt>see</dt>
+	<dd><p>IEquatable.equals</p>
+	</dd>
+</dl>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+<p>An integer value as the hash code for the object.</p>
+</li>
+</ul>
+</section>
+</section>
+</div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+	<nav class="tsd-navigation primary">
+		<ul>
+			<li class="globals  ">
+				<a href="../globals.html"><em>Globals</em></a>
+			</li>
+		</ul>
+	</nav>
+	<nav class="tsd-navigation secondary menu-sticky">
+		<ul class="before-current">
+			<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-not-exported">
+				<a href="array.html" class="tsd-kind-icon">Array</a>
+			</li>
+			<li class=" tsd-kind-interface tsd-is-not-exported">
+				<a href="boolean.html" class="tsd-kind-icon">Boolean</a>
+			</li>
+			<li class=" tsd-kind-interface tsd-is-not-exported">
+				<a href="number.html" class="tsd-kind-icon">Number</a>
+			</li>
+		</ul>
+		<ul class="current">
+			<li class="current tsd-kind-interface tsd-is-not-exported">
+				<a href="object.html" class="tsd-kind-icon">Object</a>
+				<ul>
+					<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+						<a href="object.html#equals" class="tsd-kind-icon">equals</a>
+					</li>
+					<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+						<a href="object.html#hashcode" class="tsd-kind-icon">hash<wbr>Code</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="after-current">
+			<li class=" tsd-kind-interface tsd-is-not-exported">
+				<a href="string.html" class="tsd-kind-icon">String</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+</div>
 </div>
 <footer class="with-border-bottom">
 	<div class="container">

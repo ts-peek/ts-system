@@ -113,6 +113,6 @@ module.exports = function(grunt) {
     grunt.registerTask("doc", ["clean:docs", "typedoc:build"]);
     grunt.registerTask("qa", ["tslint", "karma"]);
     grunt.registerTask("build", ["clean:build", "ts", "qa"]);
-    grunt.registerTask("all", ["build", "copy", "clean:dist", "doc"]);
+    grunt.registerTask("all", ["build", "copy", "doc"]);
     grunt.registerTask("default", ["all"]);
 };

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
@@ -108,6 +108,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.numberutil.html#equals9digitsprecision" class="tsd-kind-icon">equals9<wbr>Digits<wbr>Precision</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.numberutil.html#equalsndigitsprecision" class="tsd-kind-icon">equalsNDigits<wbr>Precision</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.numberutil.html#isparsableasnumber" class="tsd-kind-icon">is<wbr>Parsable<wbr>AsNumber</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.numberutil.html#parsenumber" class="tsd-kind-icon">parse<wbr>Number</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="system.numberutil.html#toint" class="tsd-kind-icon">to<wbr>Int</a></li>
 							</ul>
 						</section>
@@ -300,7 +301,7 @@
 									<div class="tsd-comment tsd-typography">
 										<p>The number of decimal digits that must be zero in the absolute difference
 											|{first} - {second}| in order to be considered equal. If <code>precisionDigits</code> is zero, the two values must
-										match exactly to be treated equal. Must be non-negative. Defaults to 10.</p>
+										match exactly to be treated equal. Must be non-negative and less than or equal to 20. Defaults to 10.</p>
 									</div>
 								</li>
 							</ul>
@@ -320,13 +321,30 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:91</li>
+									<li>Defined in System/NumberUtil.ts:106</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Checks whether or not the given value is parsable as a number.</p>
+									<p>Checks whether or not the given value is parsable as a number. This method is more restrictive than the <code>parseInt</code>
+									method provided by the JavaScript language itself. Following values cause the method to return false:</p>
+									<p><p>
+											<code>
+NumberUtil.isParsableAsNumber(undefined);
+NumberUtil.isParsableAsNumber(null);
+NumberUtil.isParsableAsNumber(&quot;NaN&quot;);
+NumberUtil.isParsableAsNumber(&quot;123Test&quot;);
+NumberUtil.isParsableAsNumber(&quot;123,456&quot;);
+</code></p>
+										<p><p>
+												The method does not consider any cultural differences of number representations; it uses the english format without any
+											group separators. It supports the scientific notation, i.e <code>1.23456E3</code> is considered a parsable number.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p>NumberUtil.parseNumber</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -343,6 +361,49 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="parsenumber" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> parse<wbr>Number</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Number<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in System/NumberUtil.ts:122</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Parses the given string value as a number. This method is more restrictive than the <code>parseInt</code> method provided by the
+										JavaScript language itself. The provided value may be parsed to a number iff the <code>NumberUtil.isParsableNumber</code> method
+									returns <code>true</code>.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p>NumberUtil.isParsableAsNumber</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p><code>FormatException</code> If the <code>value</code> cannot be parsed to a number due to a invalid number
+										representation.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value being parsed. Must represent a valid number as string.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The parsed number.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="toint" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> to<wbr>Int</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -352,12 +413,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/NumberUtil.ts:100</li>
+									<li>Defined in System/NumberUtil.ts:135</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Gets the integer part of the given number.</p>
+									<p>Gets the integer part of the given number. If the number is <code>NaN</code>, this method returns 0.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -384,11 +445,6 @@
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/system.html">System</a>
-						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-module">
-								<a href="../modules/system.diagnosis.html">Diagnosis</a>
-							</li>
-						</ul>
 					</li>
 					<li class=" tsd-kind-module tsd-parent-kind-module">
 						<a href="../modules/system.diagnosis.html">System.<wbr>Diagnosis</a>
@@ -419,6 +475,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="system.numberutil.html#isparsableasnumber" class="tsd-kind-icon">is<wbr>Parsable<wbr>AsNumber</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="system.numberutil.html#parsenumber" class="tsd-kind-icon">parse<wbr>Number</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="system.numberutil.html#toint" class="tsd-kind-icon">to<wbr>Int</a>

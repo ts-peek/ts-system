@@ -100,12 +100,13 @@ module System {
          * The method does not consider any cultural differences of number representations; it uses the english format without any
          * group separators. It supports the scientific notation, i.e <code>1.23456E3</code> is considered a parsable number.
          * @see NumberUtil.parseNumber
-         * 
          * @param value The value being checked.
          * @returns <code>true</code> if the given value may be parsed as a number; <code>false</code> otherwise.
          */
         public static isParsableAsNumber(value: string): boolean {
+            /* tslint:disable:no-construct */
             return value !== null && ObjectUtil.isNumber(parseFloat(new Number(value).toString()));
+            /* tslint:enable:no-construct */
         }
 
         /**
@@ -113,15 +114,17 @@ module System {
          * JavaScript language itself. The provided value may be parsed to a number iff the <code>NumberUtil.isParsableNumber</code> method
          * returns <code>true</code>.
          * @see NumberUtil.isParsableAsNumber
-         * 
          * @param value The value being parsed. Must represent a valid number as string.
          * @returns The parsed number.
-         * @throws <code>FormatException</code> If the <code>value</code> cannot be parsed to a number due to a invalid number representation.
+         * @throws <code>FormatException</code> If the <code>value</code> cannot be parsed to a number due to a invalid number 
+         * representation.
          */
         public static parseNumber(value: string): number {
             Contract.requires(NumberUtil.isParsableAsNumber(value), FormatException, "The provided value may not be parsed as a number.");
 
+            /* tslint:disable:no-construct */
             return parseFloat(new Number(value).toString());
+            /* tslint:enable:no-construct */
         }
 
         /**

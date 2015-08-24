@@ -1,7 +1,9 @@
 ﻿/// <reference path="../reference.ts"/> 
 
 module System {
-    "use strict"; /**
+    "use strict";
+
+    /**
      * Class providing utility methods when dealing with objects or when more information about a value is required.
      * 
      * @author Christian Schaiter

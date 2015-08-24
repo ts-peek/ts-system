@@ -106,6 +106,7 @@
     <TypeScriptCompile Include="Test\System\FormatExceptionTest.ts" />
     <TypeScriptCompile Include="Test\System\HashCodeBuilderTest.ts" />
     <TypeScriptCompile Include="Test\System\InterfaceRegistryTest.ts" />
+    <TypeScriptCompile Include="Test\System\InvalidOperationExceptionTest.ts" />
     <TypeScriptCompile Include="Test\System\NotImplementedExceptionTest.ts" />
     <TypeScriptCompile Include="Test\System\NumberUtilTest.ts" />
     <TypeScriptCompile Include="Test\System\ObjectUtilTest.ts" />

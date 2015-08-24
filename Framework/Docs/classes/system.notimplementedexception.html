@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
@@ -109,9 +109,8 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="system.notimplementedexception.html#innerexception" class="tsd-kind-icon">inner<wbr>Exception</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="system.notimplementedexception.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="system.notimplementedexception.html#message" class="tsd-kind-icon">message</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="system.notimplementedexception.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="system.notimplementedexception.html#stacktrace" class="tsd-kind-icon">stack<wbr>Trace</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
@@ -130,6 +129,7 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Not<wbr>Implemented<wbr>Exception<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="system.notimplementedexception.html" class="tsd-signature-type">NotImplementedException</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Not<wbr>Implemented<wbr>Exception<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, innerException<span class="tsd-signature-symbol">: </span><a href="system.exception.html" class="tsd-signature-type">Exception</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="system.notimplementedexception.html" class="tsd-signature-type">NotImplementedException</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -157,6 +157,39 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="system.notimplementedexception.html" class="tsd-signature-type">NotImplementedException</a></h4>
 						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overwrites <a href="system.exception.html">Exception</a>.<a href="system.exception.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in System/NotImplementedException.ts:23</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a new instance of the <code>NotImplementedException</code> class.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>message: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The message that provides more details about the reason of the exception.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>innerException: <a href="system.exception.html" class="tsd-signature-type">Exception</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The reason why the newly created exception occured.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="system.notimplementedexception.html" class="tsd-signature-type">NotImplementedException</a></h4>
+						</li>
 					</ul>
 				</section>
 			</section>
@@ -169,7 +202,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="system.exception.html">Exception</a>.<a href="system.exception.html#innerexception">innerException</a></p>
 						<ul>
-							<li>Defined in System/Exception.ts:86</li>
+							<li>Defined in System/Exception.ts:80</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -178,19 +211,20 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="message" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> message</h3>
+					<h3>message</h3>
 					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Overwrites <a href="system.exception.html">Exception</a>.<a href="system.exception.html#message">message</a></p>
+						<p>Inherited from <a href="system.exception.html">Exception</a>.<a href="system.exception.html#message">message</a></p>
+						<p>Overwrites <a href="system.error.html">Error</a>.<a href="system.error.html#message">message</a></p>
 						<ul>
-							<li>Defined in System/NotImplementedException.ts:22</li>
+							<li>Defined in System/Exception.ts:75</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The message that provides more details about the reason of the exception.</p>
+							<p>The message containing more detailed information about the exception.</p>
 						</div>
 					</div>
 				</section>
@@ -207,22 +241,6 @@
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the exception.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="stacktrace" class="tsd-anchor"></a>
-					<h3>stack<wbr>Trace</h3>
-					<div class="tsd-signature tsd-kind-icon">stack<wbr>Trace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="system.exception.html">Exception</a>.<a href="system.exception.html#stacktrace">stackTrace</a></p>
-						<ul>
-							<li>Defined in System/Exception.ts:81</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The stack trace of the exception.</p>
 						</div>
 					</div>
 				</section>
@@ -263,11 +281,6 @@
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/system.html">System</a>
-						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-module">
-								<a href="../modules/system.diagnosis.html">Diagnosis</a>
-							</li>
-						</ul>
 					</li>
 					<li class=" tsd-kind-module tsd-parent-kind-module">
 						<a href="../modules/system.diagnosis.html">System.<wbr>Diagnosis</a>
@@ -287,14 +300,11 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="system.notimplementedexception.html#innerexception" class="tsd-kind-icon">inner<wbr>Exception</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="system.notimplementedexception.html#message" class="tsd-kind-icon">message</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="system.notimplementedexception.html#name" class="tsd-kind-icon">name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="system.notimplementedexception.html#stacktrace" class="tsd-kind-icon">stack<wbr>Trace</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="system.notimplementedexception.html#tostring" class="tsd-kind-icon">to<wbr>String</a>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
@@ -97,7 +97,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="system.stringutil.html#emptystring" class="tsd-kind-icon">empty<wbr>String</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="system.stringutil.html#empty_string" class="tsd-kind-icon">EMPTY_<wbr>STRING</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -112,9 +112,9 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="emptystring" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> empty<wbr>String</h3>
-					<div class="tsd-signature tsd-kind-icon">empty<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="empty_string" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> EMPTY_<wbr>STRING</h3>
+					<div class="tsd-signature tsd-kind-icon">EMPTY_<wbr>STRING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in System/StringUtil.ts:18</li>
@@ -133,32 +133,29 @@
 					<a name="format" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> format</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">(</span>format<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">(</span>format<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in System/StringUtil.ts:39</li>
+									<li>Defined in System/StringUtil.ts:36</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Converts the placeholders of the format string with the string representation of the provided varargs values.</p>
+									<p>Replaces the placeholders of the format string with the string representation of the provided varargs values.</p>
 									<p><p>
 											The placeholders of the format string take the form <code>{n}</code>, where <code>n</code> is a non-negative
-											integer number starting with 0, which denotes the position in the varargs value array. Please note that a number
-											greater than or equal to the number of values will cause a <code>FormatException</code>. Hence, the placeholders
-										<code>{0}, {1}, {2}</code> are valid if at least three values are provided when invoking the function.</p>
+											integer number starting with 0, which denotes the position in the varargs value array. If the value for
+											<code>n</code> is not a number, it will not get replaced but left unmodified instead. The same is true for
+											negative placeholder numbers. Hence, a placeholder will only get substituted if there is a matching index in
+										the varargs array.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
 									<dd><p><code>ArgumentUndefinedException</code> If the <code>format</code> argument is <code>undefined</code> or
 										<code>null</code>.</p>
-									</dd>
-									<dt>throws</dt>
-									<dd><p><code>FormatException</code> If a placeholder index greater than or equal to the number of given values in
-										the varargs array.</p>
 									</dd>
 								</dl>
 							</div>
@@ -168,20 +165,18 @@
 									<h5>format: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The format string containing the placeholders <code>{n}</code>. May not be <code>undefined</code>
-											or <code>null</code>. If a placeholder index is greater than or equal to the number of provided values, a
-										<code>FormatException</code> is thrown.</p>
+										or <code>null</code>.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The values whose string representation replace the placeholders in the format string. Must at least
-										contain more elements than the greaterst placeholder index.</p>
+										<p>The values whose string representation substitute the placeholders in the format string at the.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-							<p>The format string with all placeholders being replaced by its corresponding value.</p>
+							<p>The format string with all placeholders being replaced by its corresponding values.</p>
 						</li>
 					</ul>
 				</section>
@@ -195,11 +190,6 @@
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/system.html">System</a>
-						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-module">
-								<a href="../modules/system.diagnosis.html">Diagnosis</a>
-							</li>
-						</ul>
 					</li>
 					<li class=" tsd-kind-module tsd-parent-kind-module">
 						<a href="../modules/system.diagnosis.html">System.<wbr>Diagnosis</a>
@@ -214,7 +204,7 @@
 						<a href="system.stringutil.html" class="tsd-kind-icon">String<wbr>Util</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="system.stringutil.html#emptystring" class="tsd-kind-icon">empty<wbr>String</a>
+								<a href="system.stringutil.html#empty_string" class="tsd-kind-icon">EMPTY_<wbr>STRING</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="system.stringutil.html#format" class="tsd-kind-icon">format</a>
