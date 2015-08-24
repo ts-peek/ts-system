@@ -1,0 +1,23 @@
+{
+	"name": "ts-system",
+	"description": "A base library providing fundamental TypeScript classes and interfaces.",
+	"moduleType": [
+		"globals"
+	],
+	"keywords": [
+		"library",
+		"typescript"
+	],
+	"authors": [
+		{ "name": "Christian Schaiter", "email": "christian.schaiter@outlook.com" }
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/lilacloud/tssystem"
+	},
+  "license": "MIT",
+  "ignore": [
+    "Framework/node_modules",
+    "Framework/Test"
+  ]
+}
