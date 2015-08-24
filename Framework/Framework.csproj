@@ -46,7 +46,6 @@
     <Content Include="Build\TSSystem.js.map" />
     <Content Include="Dist\TSSystem.min.js.map" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <Content Include="_ProjectItems\development.info" />
     <Content Include="_ProjectItems\Resharper\CodeFormatSettings.DotSettings" />
     <Content Include="_ProjectItems\Resharper\InspectionSettings.DotSettings" />
