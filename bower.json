@@ -1,0 +1,32 @@
+{
+	"name": "ts-system",
+	"description": "This TypeScript library contains functionality common for most systems, (e.g. exception types, design by contract classes, utility classes for strings/numbers/objects, etc.).",
+	"keywords": [
+		"TypeScript",
+		"utility",
+		"library"
+	],
+	"main": "Dist/ts-system.js",
+	"typescript": {
+		"definition": "Dist/ts-system.d.ts"
+	},
+	"moduleType": [ "globals" ],
+	"authors": [
+		{ "name": "Christian Schaiter", "email": "christian.schaiter@outlook.com", "homepage": "https://github.com/ts-peek/ts-system" }
+	],
+	"homepage": "https://github.com/ts-peek/ts-system",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ts-peek/ts-system"
+	},
+	"license": "MIT",
+	"ignore": [
+		"_ProjectItems",
+		"_Typings",
+		"Build",
+		"Docs",
+		"node_modules",
+		"Src",
+		"Test"
+	]
+}
