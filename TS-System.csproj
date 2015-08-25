@@ -51,6 +51,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="Build\ts-system.js" />
+    <Content Include="Build\ts-system.js.map" />
     <Content Include="Dist\ts-system.js" />
     <Content Include="Docs\index.html" />
     <Content Include="gruntfile.js" />
@@ -119,9 +120,6 @@
     <Content Include="_ProjectItems\Resharper\TypescriptSettings.DotSettings" />
     <Content Include="_ProjectItems\tsd.json" />
     <Content Include="_ProjectItems\tslint.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Build\ts-system.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dist\ts-system.js.map" />
